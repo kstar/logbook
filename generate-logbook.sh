@@ -69,8 +69,8 @@ while read object_list_line; do
     object_description=`echo $object_list_line | awk -F'|' '{ print $2 }'` # Retrieve a description of the object
     object_observability=`echo $object_list_line | awk -F'|' '{ print $3 }'` # Retrieve an observability string indicating whether the object is city / binocular observable
 
-    if [ -n $object_description ]; then
-	object_description_with_prefix="\textbf{Description:} " $object_description;
+    if [ -n "$object_description" ]; then
+	object_description_with_prefix="\textbf{Description:} $object_description";
     else
 	object_description_with_prefix=""
     fi;
@@ -137,11 +137,14 @@ while read object_list_line; do
     inkscape -T -A $skychart_PDF ${BUILD_DIR}/${object_underscored}_skychart.svg
 
     # Get DSS image
-    DSS=${BUILD_DIR}/${object_underscored}_dss.png
     DSS_URL=`qdbus org.kde.kstars /KStars org.kde.kstars.getDSSURL "$object"`
     DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
-    wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif
-    convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif $DSS
+    DSS=${BUILD_DIR}/${object_underscored}_dss.png
+    if [ ! -f $DSS ]; then
+	wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif
+	convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif $DSS
+	rm ${BUILD_DIR}/${object_underscored}_dss.gif
+    fi;
 
     # Set up the LaTeX -- TODO: This is bad; we have to find a better way to write this.
     texfile=${BUILD_DIR}/${object_underscored}.tex
@@ -195,9 +198,38 @@ ${object_description_with_prefix}
 \includegraphics[width=0.8\textwidth]{Logging-Form.pdf}
 \end{figure}
 
-\end{document}
-
 " >> $texfile
+
+if [[ "${object_observability}" == *C* ]]; then
+    echo "
+\begin{textblock}{0.5}(6.5,1.9)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{city.pdf}
+\end{figure}
+\end{minipage}
+\end{textblock}
+
+" >> $texfile;
+fi;
+
+if [[ "${object_observability}" == *[^C]B* ]]; then
+    echo "
+\begin{textblock}{0.5}(6.5,2.3)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{binoculars.pdf}
+\end{figure}
+\end{minipage}
+\end{textblock}
+
+" >> $texfile;
+fi;
+
 
 #    cd $BUILD_DIR
 #    pdflatex -interaction nonstopmode $texfile
@@ -205,30 +237,34 @@ ${object_description_with_prefix}
     
     list="$list ${object_underscored}.pdf"
     
-    if [[ $constellations != *${Constellation}* ]]; then # Create a list of unique constellations
-	constellations="${constellations} ${Constellation}";
-    fi;
+    # if [[ $constellations != *${Constellation}* ]]; then # Create a list of unique constellations
+    # 	constellations_unsort="${constellations} ${Constellation}";
+    # fi;
     
-    if [[ $types != *${Type}* ]]; then # Create a list of unique constellations
-	types="${types} ${Type}";
-    fi;
+    # if [[ $types != *${ObjecT_Type}* ]]; then # Create a list of unique constellations
+    # 	types_unsort="${types} ${Object_Type}";
+    # fi;
     
-    echo "\include{${object_underscored}.tex}" >> ${BUILD_DIR}/Objects.tex
+    echo -e "\n%%%%%%%%%%%%%%%%%%%%%% ${object} %%%%%%%%%%%%%%%%%%%%%%" >> ${BUILD_DIR}/Objects.tex
+    cat $texfile >> ${BUILD_DIR}/Objects.tex
     
     echo "${Constellation}|${Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
 done <$OBJECT_LIST;
 
+# Generate sorted lists of constellations and types
+cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $1 }' | sort | uniq > ${BUILD_DIR}/Constellations.txt
+cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $2 }' | sort | uniq > ${BUILD_DIR}/Types.txt
 
 # Generate object list by constellation
-for Constellation in $constellations; do
-    \subsection*{${Constellation}} >> ${BUILD_DIR}/ObjectsByConstellation.tex
+for Constellation in `cat ${BUILD_DIR}/Constellations.txt`; do
+    echo "\subsection*{${Constellation}}" >> ${BUILD_DIR}/ObjectsByConstellation.tex
     grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
 done;
 
 # Generate object list by type
-for Type in $types; do
-    \subsection*{${Type}} >> ${BUILD_DIR}/ObjectsByType.tex
+for Type in `cat ${BUILD_DIR}/Types.txt`; do
+    echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
     grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done;
 

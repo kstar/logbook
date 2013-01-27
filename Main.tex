@@ -8,6 +8,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage[absolute,overlay]{textpos}
 \usepackage[strict]{changepage}
 %\setlength{\oddsidemargin}{-0.5in} 
 %\setlength{\evensidemargin}{0in}
@@ -15,6 +16,8 @@
 %\setlength{\marginparsep}{0in}
 %\pagestyle{empty}
 %\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
 
 \begin{document}
 
@@ -27,34 +30,34 @@
 
 \chapter*{Preface}
 
-\include{Preface.tex}
+\include{Preface}
 
 \chapter{Legal}
 
-\include{Legal.tex}
+\include{Legal}
 
 \chapter{Acknowledgements}
 
-\include{Acknowledgements.tex}
+\include{Acknowledgements}
 
 \mainmatter
 
 \chapter{Glossary of Technical Terms}
 
-\include{Glossary.tex}
+\include{Glossary}
 
 \chapter{Understanding the Log Form}
 
-\include{LogFormDescription.tex}
+\include{LogFormDescription}
 
 \twocolumn
 \chapter{List of Objects by Constellation}
 
-\include{build/ObjectsByConstellation.tex}
+\include{build/ObjectsByConstellation}
 
 \chapter{List of Objects by Type}
 
-\include{build/ObjectsByType.tex}
+\include{build/ObjectsByType}
 
 %% \subsection*{Andromeda}
 %% Andromeda Galaxy (M 31)\\
@@ -245,21 +248,21 @@
 
 \chapter{Checklist of Objects}
 
-\include{build/Checklist.tex}
+\include{build/Checklist}
 
 \chapter{Main Content}
 
-\setlength{\oddsidemargin}{-0.5in} 
-%\setlength{\evensidemargin}{0}
-\setlength{\marginparwidth}{0in}
+%\setlength{\oddsidemargin}{0.2in} 
+%\setlength{\evensidemargin}{0.2in}
+\setlength{\marginparwidth}{0.2in}
 \setlength{\marginparsep}{0in}
 %\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
 \setlength{\topmargin}{0.1in}
 %\setlength{\bottommargin}{0.2in}
 \setlength{\leftmargin}{-0.5in}
-\setlength{\rightmargin}{-0.5in}
+%\setlength{\rightmargin}{-0.3in}
 \addtolength{\textwidth}{0.7in}
 
-\include{build/Objects.tex}
+\include{build/Objects}
 
 \end{document}
