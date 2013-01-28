@@ -1,0 +1,7 @@
+M 1|A somewhat faint nebula. This is the remains of the supernova explosion that Chinese astronomers recorded in 1054 A.D.|
+M 2||B CT
+M 3||B CT
+M 4|A low surface brightness, but well resolved globular cluster. Might be easier to locate with binoculars than with a telescope. Stars resolved even in small telescopes.|B CB CT
+M 5|A bright globular cluster.|B CT
+M 6|With a telescope, try to observe the butterfly pattern of stars that gives this cluster its name.|CB CT B N
+M 7|A remarkable cluster with few bright stars. Can be viewed with the naked eye from city skies at times.|CB CT B CN N
