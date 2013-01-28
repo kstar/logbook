@@ -27,10 +27,11 @@
 DEBUG="1"
 
 if [ -z $1 ]; then
-
     echo "ERROR: No project name supplied. The project name is the title of the logbook."
     echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
     exit 1;
+else
+    PROJECT_NAME=$1
 fi;
 
 if [ -z $2 ]; then
@@ -47,20 +48,52 @@ else
     BUILD_DIR=$3
 fi;
 
+if [ -z $4 ]; then
+    LOGO_FILE="logo.eps"
+else
+    LOGO_FILE=$4
+fi;
+
 if [ ! -f $OBJECT_LIST ]; then
     echo "Object list file " $OBJECT_LIST " not found."
     echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
     exit 1;
 fi;
 
+if [ ! -f $LOGO_FILE ]; then
+    echo "Warning: Not a valid file: " $LOGO_FILE
+    echo "Will not use any logo"
+    LOGO_FILE=''
+fi;
+
+# Other settings
+LOGO_SIZE=0.7 # Logo size in inches.
+CITY_ICON="city.pdf"
+BINOCULAR_ICON="binoculars.pdf"
+TELESCOPE_ICON="kstars.pdf"
+
 mkdir -p $BUILD_DIR; # Create the "build" directory
 
 list='' # List of objects for final processing
+checklist_count=0 # Count for objects in checklist to prevent overflowing the page.
+object_count=0 # Count of the number of objects, that doesn't reset
+total_objects=`wc -l ${OBJECT_LIST}` # Total number of objects
 
 echo "" > ${BUILD_DIR}/Objects.tex
 echo "" > ${BUILD_DIR}/ConstType.txt
 echo "" > ${BUILD_DIR}/ObjectsByType.tex
 echo "" > ${BUILD_DIR}/ObjectsByConstellation.tex
+
+echo "\resizebox{\textwidth}{!}{
+\centering
+%\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
+\begin{tabular}{|c|c|c|c|c|c||c|c|}
+\hline
+Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+\hline
+\hline
+" > ${BUILD_DIR}/Checklist.tex
+
 while read object_list_line; do
 
     if [ $DEBUG ]; then echo "Processing line: " $object_list_line; fi;
@@ -133,6 +166,8 @@ while read object_list_line; do
 #    echo "qdbus org.kde.kstars /KStars org.kde.kstars.exportImage `pwd`/${BUILD_DIR}/${object_underscored}_skychart.svg"
     qdbus org.kde.kstars /KStars org.kde.kstars.exportImage `pwd`/${BUILD_DIR}/${object_underscored}_skychart.svg
     
+    if [ $DEBUG ]; then echo "Obtained skychart. Converting to PDF"; fi;
+
     skychart_PDF=${BUILD_DIR}/${object_underscored}_skychart.pdf
     inkscape -T -A $skychart_PDF ${BUILD_DIR}/${object_underscored}_skychart.svg
 
@@ -141,20 +176,25 @@ while read object_list_line; do
     DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
     DSS=${BUILD_DIR}/${object_underscored}_dss.png
     if [ ! -f $DSS ]; then
+	if [ $DEBUG ]; then echo "Obtaining DSS image. Query URL: " $DSS_URL; fi;
 	wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif
 	convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif $DSS
 	rm ${BUILD_DIR}/${object_underscored}_dss.gif
+    else
+	if [ $DEBUG ]; then echo "DSS image found at ${DSS}. Assuming that we can use that."; fi;
     fi;
 
     # Set up the LaTeX -- TODO: This is bad; we have to find a better way to write this.
+    if [ $DEBUG ]; then echo "Generating TeX for the object's logging form"; fi;
     texfile=${BUILD_DIR}/${object_underscored}.tex
     echo "" > $texfile
     echo "
 \section*{\center \Huge ${Name_Display}}
+\label{$object_underscored}
 \begin{center}
 \Large ${Object_Type} in ${Constellation} \\
 \end{center}
-\vspace{5pt}
+\vspace{2pt}
 
 \begin{center}
 {\large Data}
@@ -171,9 +211,9 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \end{tabular}
 \end{center}
 
-\vspace{5pt}
-${object_description_with_prefix}
-\vspace{5pt}
+\vspace{3pt}
+{\small ${object_description_with_prefix}}
+\vspace{2pt}
 
 \begin{figure}[h!]
 \centering
@@ -199,37 +239,80 @@ ${object_description_with_prefix}
 \end{figure}
 
 " >> $texfile
-
-if [[ "${object_observability}" == *C* ]]; then
-    echo "
-\begin{textblock}{0.5}(6.5,1.9)
+    
+    if [ -n $LOGO_FILE -a -f $LOGO_FILE ]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place logo from ${LOGO_FILE}"; fi;
+	echo "
+\begin{textblock}{${LOGO_SIZE}}(0.8,2.0)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{city.pdf}
+\includegraphics[width=\textwidth]{$LOGO_FILE}
+\end{figure}
+\end{minipage}
+\end{textblock}
+
+" >> $texfile
+    fi;
+
+
+    if [[ "${object_observability}" == *C* ]]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place city icon from ${CITY_ICON} and telescope icon from ${TELESCOPE_ICON}"; fi;
+	echo "
+\begin{textblock}{0.5}(6.55,2.4)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{${CITY_ICON}}
+\end{figure}
+\end{minipage}
+\end{textblock}
+
+\begin{textblock}{0.2}(7.10,2.55)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{${TELESCOPE_ICON}}
+\end{figure}
+\end{minipage}
+\end{textblock}
+" >> $texfile;
+    fi;
+
+    if [[ "${object_observability}" == *B* ]]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON}"; fi;
+	echo "
+\begin{textblock}{0.5}(6.55,2.9)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{${BINOCULAR_ICON}}
 \end{figure}
 \end{minipage}
 \end{textblock}
 
 " >> $texfile;
-fi;
+    fi;
 
-if [[ "${object_observability}" == *[^C]B* ]]; then
-    echo "
-\begin{textblock}{0.5}(6.5,2.3)
+    if [[ "${object_observability}" == *CB* ]]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON} next to the city icon"; fi;
+	echo "
+\begin{textblock}{0.20}(7.10,2.35)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{binoculars.pdf}
+\includegraphics[width=\textwidth]{${BINOCULAR_ICON}}
 \end{figure}
 \end{minipage}
 \end{textblock}
 
 " >> $texfile;
-fi;
-
+    fi;
 
 #    cd $BUILD_DIR
 #    pdflatex -interaction nonstopmode $texfile
@@ -245,26 +328,61 @@ fi;
     # 	types_unsort="${types} ${Object_Type}";
     # fi;
     
+    if [ $DEBUG ]; then echo "Concatenating rendered TeX into Objects.tex file in ${BUILD_DIR} directory"; fi;
     echo -e "\n%%%%%%%%%%%%%%%%%%%%%% ${object} %%%%%%%%%%%%%%%%%%%%%%" >> ${BUILD_DIR}/Objects.tex
+    echo -e "\n\\\\clearpage" >> ${BUILD_DIR}/Objects.tex
     cat $texfile >> ${BUILD_DIR}/Objects.tex
     
-    echo "${Constellation}|${Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
+    if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
+    echo "${Constellation}|${Object_Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
+    if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
+    echo "${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
+
+    # If we are overflowing a page (~ 55 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
+    object_count=$(($object_count+1))
+    checklist_count=$(($checklist_count+1))
+    if [ ${checklist_count} -ge 55 -a ${object_count} -lt ${total_objects} ]; then
+	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
+	echo "\end{tabular}
+}
+\clearpage
+\resizebox{\textwidth}{!}{
+\centering
+%\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
+\begin{tabular}{|c|c|c|c|c|c||c|c|}
+\hline
+Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+\hline
+\hline
+" >> ${BUILD_DIR}/Checklist.tex
+	checklist_count=0;
+    fi;
+
+echo "Object-wise Progress: " `echo "100*${object_count}/${total_objects}" | bc` "%";
+    
 done <$OBJECT_LIST;
 
+echo "\end{tabular}
+}" >> ${BUILD_DIR}/Checklist.tex
+
 # Generate sorted lists of constellations and types
+if [ $DEBUG ]; then echo "Making lists of constellations and types in Constellations.txt and Types.txt."; fi;
 cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $1 }' | sort | uniq > ${BUILD_DIR}/Constellations.txt
 cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $2 }' | sort | uniq > ${BUILD_DIR}/Types.txt
 
 # Generate object list by constellation
-for Constellation in `cat ${BUILD_DIR}/Constellations.txt`; do
+while read Constellation; do
+    if [ $DEBUG ]; then echo "Writing constellation-wise index for constellation ${Constellation}"; fi;
     echo "\subsection*{${Constellation}}" >> ${BUILD_DIR}/ObjectsByConstellation.tex
     grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
-done;
+done < ${BUILD_DIR}/Constellations.txt;
 
 # Generate object list by type
-for Type in `cat ${BUILD_DIR}/Types.txt`; do
+while read Type; do
+    if [ $DEBUG ]; then echo "Writing object-type-wise index for object type ${Type}"; fi;
     echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
     grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
-done;
+done < ${BUILD_DIR}/Types.txt;
 
+if [ $DEBUG ]; then echo "Script finished!"
