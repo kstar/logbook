@@ -107,4 +107,4 @@ M 106||
 M 107||
 M 108||
 M 109|Competing with M 74 for the faintest of the Messier catalog, especially from lower latitudes, this barred spiral galaxy needs dark skies. But from dark skies, you can discern the bar fairly easily with 8'' of aperture.|
-M 110|The fainter companion of M 31. Binoculars may be able to discern this. Larger binoculars are better. This appears rather removed from M 31 in telescopes than in the photographs because the outer parts of M 31 are rather low surface brightness and are not seen easily through a telescope. See also the description for M 32.|B
+M 110|The fainter companion of M 31. Binoculars may be able to discern this. M 110 appears more distant from M 31 in telescopes than in photographs because outer parts of M 31 are rather low surface brightness and are not seen easily. See also M 32.|B

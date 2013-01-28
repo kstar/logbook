@@ -26,7 +26,7 @@
 
 DEBUG="1"
 
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
     echo "ERROR: No project name supplied. The project name is the title of the logbook."
     echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
     exit 1;
@@ -34,7 +34,7 @@ else
     PROJECT_NAME=$1
 fi;
 
-if [ -z $2 ]; then
+if [ -z "$2" ]; then
     OBJECT_LIST='objectlist.txt'
 else
     OBJECT_LIST=$2
@@ -42,28 +42,28 @@ fi;
 
 if [ $DEBUG ]; then echo $OBJECT_LIST; fi;
 
-if [ -z $3 ]; then
+if [ -z "$3" ]; then
     BUILD_DIR='build'
 else
     BUILD_DIR=$3
 fi;
 
-if [ -z $4 ]; then
+if [ -z "$4" ]; then
     LOGO_FILE="logo.eps"
 else
     LOGO_FILE=$4
 fi;
 
-if [ ! -f $OBJECT_LIST ]; then
+if [ ! -f "$OBJECT_LIST" ]; then
     echo "Object list file " $OBJECT_LIST " not found."
     echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
     exit 1;
 fi;
 
-if [ ! -f $LOGO_FILE ]; then
+if [ ! -f "$LOGO_FILE" ]; then
     echo "Warning: Not a valid file: " $LOGO_FILE
     echo "Will not use any logo"
-    LOGO_FILE=''
+    LOGO_FILE=""
 fi;
 
 # Other settings
@@ -75,9 +75,9 @@ TELESCOPE_ICON="kstars.pdf"
 mkdir -p $BUILD_DIR; # Create the "build" directory
 
 list='' # List of objects for final processing
-checklist_count=0 # Count for objects in checklist to prevent overflowing the page.
+checklist_count=10 # Count for objects in checklist to prevent overflowing the page. Start from 10 since the first page has a chapter title etc.
 object_count=0 # Count of the number of objects, that doesn't reset
-total_objects=`wc -l ${OBJECT_LIST}` # Total number of objects
+total_objects=`cat ${OBJECT_LIST} | wc -l` # Total number of objects
 
 echo "" > ${BUILD_DIR}/Objects.tex
 echo "" > ${BUILD_DIR}/ConstType.txt
@@ -191,6 +191,7 @@ while read object_list_line; do
     echo "
 \section*{\center \Huge ${Name_Display}}
 \label{$object_underscored}
+\vspace{-2pt}
 \begin{center}
 \Large ${Object_Type} in ${Constellation} \\
 \end{center}
@@ -212,7 +213,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \end{center}
 
 \vspace{3pt}
-{\small ${object_description_with_prefix}}
+{\small ${object_description_with_prefix}} \\\\
 \vspace{2pt}
 
 \begin{figure}[h!]
@@ -233,23 +234,23 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 
 \\\\
 
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{Logging-Form.pdf}
-\end{figure}
+\end{figure*}
 
 " >> $texfile
     
-    if [ -n $LOGO_FILE -a -f $LOGO_FILE ]; then
+    if [ -n "$LOGO_FILE" -a -f "$LOGO_FILE" ]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place logo from ${LOGO_FILE}"; fi;
 	echo "
 \begin{textblock}{${LOGO_SIZE}}(0.8,2.0)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \includegraphics[width=\textwidth]{$LOGO_FILE}
-\end{figure}
+\end{figure*}
 \end{minipage}
 \end{textblock}
 
@@ -260,23 +261,23 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     if [[ "${object_observability}" == *C* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place city icon from ${CITY_ICON} and telescope icon from ${TELESCOPE_ICON}"; fi;
 	echo "
-\begin{textblock}{0.5}(6.55,2.4)
+\begin{textblock}{0.5}(6.65,2.15)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \includegraphics[width=\textwidth]{${CITY_ICON}}
-\end{figure}
+\end{figure*}
 \end{minipage}
 \end{textblock}
 
-\begin{textblock}{0.2}(7.10,2.55)
+\begin{textblock}{0.2}(7.22,2.30)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \includegraphics[width=\textwidth]{${TELESCOPE_ICON}}
-\end{figure}
+\end{figure*}
 \end{minipage}
 \end{textblock}
 " >> $texfile;
@@ -285,13 +286,13 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     if [[ "${object_observability}" == *B* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON}"; fi;
 	echo "
-\begin{textblock}{0.5}(6.55,2.9)
+\begin{textblock}{0.5}(6.65,2.525)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \includegraphics[width=\textwidth]{${BINOCULAR_ICON}}
-\end{figure}
+\end{figure*}
 \end{minipage}
 \end{textblock}
 
@@ -301,13 +302,13 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     if [[ "${object_observability}" == *CB* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON} next to the city icon"; fi;
 	echo "
-\begin{textblock}{0.20}(7.10,2.35)
+\begin{textblock}{0.20}(7.22,2.10)
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \includegraphics[width=\textwidth]{${BINOCULAR_ICON}}
-\end{figure}
+\end{figure*}
 \end{minipage}
 \end{textblock}
 
@@ -332,6 +333,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     echo -e "\n%%%%%%%%%%%%%%%%%%%%%% ${object} %%%%%%%%%%%%%%%%%%%%%%" >> ${BUILD_DIR}/Objects.tex
     echo -e "\n\\\\clearpage" >> ${BUILD_DIR}/Objects.tex
     cat $texfile >> ${BUILD_DIR}/Objects.tex
+    echo '{\footnotesize \center This content is protected by Copyrights. See the~\nameref{Legal} chapter of this document for details.}' >> ${BUILD_DIR}/Objects.tex
     
     if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
     echo "${Constellation}|${Object_Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
@@ -339,10 +341,11 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
     echo "${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
 
-    # If we are overflowing a page (~ 55 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
+    # If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
     object_count=$(($object_count+1))
     checklist_count=$(($checklist_count+1))
-    if [ ${checklist_count} -ge 55 -a ${object_count} -lt ${total_objects} ]; then
+    if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${total_objects}"; fi;
+    if [ ${checklist_count} -ge 65 -a ${object_count} -lt ${total_objects} ]; then
 	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
 	echo "\end{tabular}
 }
@@ -359,7 +362,7 @@ Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 	checklist_count=0;
     fi;
 
-echo "Object-wise Progress: " `echo "100*${object_count}/${total_objects}" | bc` "%";
+echo "Object-wise Progress: " `echo "100*${object_count}/${total_objects}" | bc`"%";
     
 done <$OBJECT_LIST;
 
@@ -385,4 +388,5 @@ while read Type; do
     grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done < ${BUILD_DIR}/Types.txt;
 
-if [ $DEBUG ]; then echo "Script finished!"
+if [ $DEBUG ]; then echo "Script finished!"; fi;
+
