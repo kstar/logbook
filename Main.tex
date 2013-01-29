@@ -13,6 +13,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{wrapfig}
+\usepackage{fancyhdr}
 
 %\setlength{\oddsidemargin}{-0.5in} 
 %\setlength{\evensidemargin}{0in}
@@ -30,6 +31,14 @@
 
 \renewcommand\chaptername{}
 \renewcommand{\thesubfigure}{\relax}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
+
+\fancyfoot[C]{This content is protected by Copyrights. See the~\nameref{Legal} chapter of this document for details.}
+\fancyfoot[RO, LE]{\thepage}
+\pagestyle{fancy}
 
 \begin{document}
 

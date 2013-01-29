@@ -22,51 +22,107 @@
 # Dependencies: xmlstarlet, inkscape, pdflatex, kstars, ImageMagick (convert), pdftk
 #
 
-# Invokation: ./generate-logbook.sh <project name> [object list file] ["build" directory]
+##### Variables in the configuration file supplied. Default values in parantheses.
 
-DEBUG="1"
+### Mandatory
+# PROJECT_NAME -- The title of the book (eg: The Messier Observer's Handbook)
+# OBJECTLIST_FILE -- A file containing a list of objects that KStars knows about. Optionally, separated by |, fields containing a brief description of the object, and observability codes
+# PREFACE_FILE -- A TeX file containing the preface of the logbook
 
+### Generic
+# DEBUG (unset) -- if set, enables verbose debugging output
+# NO_DELETE_UNUSED (unset) -- if set, does not delete temporary sky chart SVG and DSS gif files
+# NO_REUSE_EXISTING_SKYCHART (unset) -- if set, does not reuse existing skychart images, and generates new ones instead
+# NO_REUSE_EXISTING_DSS (unset) -- if set, does not reuse existing DSS images, and downloads new ones instead
+# DSS_RESIZE (unset) -- can be set to a size (eg: 1024) argument understood by the -resize option of ImageMagick's convert utility, so as to save space by downscaling DSS imagery.
+
+### Controlling the form generation
+# SINGLE_PAGE (unset) -- if set, enables single-page logging forms
+# FOV_ZOOMED_IN (unset) -- used only in two-page mode. Sets the zoomed-in FOV. If unset, a dynamic FOV of 10 * (object's major axis is used)
+# FOV_ZOOMED_OUT (40) -- used only in two-page mode. Sets the zoomed-out FOV. If unset, a default of 40 degrees is used
+# FOV_INTERMEDIATE (unset) -- used only in two-page mode. Sets the intermediate FOV. If unset, the logarithmic average of the zoomed-in and zoomed-out FOVs is used.
+# APPROX_FOV (20) -- used only in single-page mode. Sets the FOV of the skychart
+# SKYCHART_RATIO (0.6) -- used only in single-page mode. Sets the ratio of space used by the sky chart to the total space used by the DSS image and the sky chart.
+
+### Overlays
+# LOGO_SIZE (0.7) -- size of an optional logo overlay in inches
+# LOGO_FILE (unset) -- file containing an optional logo to render on each object's front page
+# BINOCULAR_ICON (binoculars.pdf) -- a file containing clipart of a binocular to render for binocular-observable objects
+# TELESCOPE_ICON (kstars.pdf) -- a file containing clipart of a telescope to render for telescope-observable objects
+# LOGFORM_FILE (Logging-Form.pdf) -- a file containing the logging form
+
+##### Default values for various settable parameters.
+## Unsettables
+unset LOGO_FILE
+unset DSS_RESIZE
+unset NO_DELETE_UNUSED
+unset NO_REUSE_EXISTING_DSS
+unset NO_REUSE_EXISTING_SKYCHART
+unset SINGLE_PAGE
+unset FOV_ZOOMED_IN
+unset FOV_INTERMEDIATE
+unset FOV_ZOOMED_OUT
+unset APPROX_FOV
+
+## Debug mode (verbosity)
+unset DEBUG
+
+## Star chart and DSS imagery settings
+SKYCHART_RATIO=0.6 ## Used _only_ with single page mode. Percentage of the space that is allocated to the Sky Chart.
+
+## Files and properties for various icons and overlays.
+LOGO_SIZE=0.7 # Logo size in inches.
+CITY_ICON="city.pdf"
+BINOCULAR_ICON="binoculars.pdf"
+TELESCOPE_ICON="kstars.pdf"
+LOGFORM_FILE="Logging-Form.pdf"
+
+##### Read command line arguments. Check if we have been supplied with a configuration file, exporting various variables.
 if [ -z "$1" ]; then
-    echo "ERROR: No book title supplied."
-    echo "Invokation: ./generate-logbook.sh <book title> <preface file> [object list file] [\"build\" directory]"
+    echo "ERROR: No configuration file supplied. Please see the README for details on how to create one."
+    echo "Invokation: ./generate-logbook.sh <configuration shell script> [\"build\" directory]"
+    echo "Note that the build directory *MUST BE* relative to the current directory. The default value is 'build'"
     exit 1;
 else
-    PROJECT_NAME=$1
+    CONFIG_FILE=$1
 fi;
 
-if [ -z "$2" -o ! -f "$2" ]; then
-    echo "ERROR: Preface LaTeX input file \"$2\" is not a valid file."
-    echo "Invokation: ./generate-logbook.sh <book title> <preface file> [object list file] [\"build\" directory]"
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "ERROR: Configuration script file " $CONFIG_FILE " not found. Please supply a valid filename."
+    echo "Invokation: ./generate-logbook.sh <configuration shell script> [\"build\" directory]"
+    echo "Note that the build directory *MUST BE* relative to the current directory. The default value is 'build'"
     exit 1;
-else
-    PREFACE_FILE=$2
 fi;
 
-if [ -z "$3" ]; then
-    OBJECT_LIST='objectlist.txt'
-else
-    OBJECT_LIST=$3
-fi;
-
-if [ $DEBUG ]; then echo $OBJECT_LIST; fi;
-
-if [ -z "$4" ]; then
+if [ -z "$2" ]; then
     BUILD_DIR='build'
 else
     BUILD_DIR=$4
 fi;
 
-if [ -z "$5" ]; then
-    LOGO_FILE="logo.eps"
-else
-    LOGO_FILE=$5
-fi;
+if [ $DEBUG ]; then echo "Using the directory ${BUILD_DIR} for temporary files and for caching DSS images. The directory will be created if it does not already exist."; fi;
+mkdir -p $BUILD_DIR; # Create the "build" directory
 
-if [ ! -f "$OBJECT_LIST" ]; then
-    echo "Object list file " $OBJECT_LIST " not found."
-    echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
+##### Source configuration file and check if essential variables are defined and valid
+if [ $DEBUG ]; then echo "Sourcing config file: ${CONFIG_FILE}"; fi;
+source $CONFIG_FILE;
+
+if [ -z "$PROJECT_NAME" ]; then
+    echo "ERROR: Project Name is blank. Please set at least the bare minimum required parameters. See the README for more."
     exit 1;
 fi;
+
+if [ ! -f "$OBJECTLIST_FILE" ]; then
+    echo "ERROR: Object list file " $OBJECTLIST_FILE " not found. Please set a valid file."
+    exit 1;
+fi;
+
+if [ ! -f "$PREFACE_FILE" ]; then
+    echo "ERROR: LaTeX Preface file \"$2\" is not a valid file. Please set a valid file."
+    exit 1;
+fi;
+
+if [ $DEBUG ]; then echo "Object list file: ${OBJECTLIST_FILE}. Preface file: ${PREFACE_FILE}. Project Name: ${PROJECT_NAME}"; fi;
 
 if [ ! -f "$LOGO_FILE" ]; then
     echo "Warning: Not a valid file: " $LOGO_FILE
@@ -74,19 +130,18 @@ if [ ! -f "$LOGO_FILE" ]; then
     LOGO_FILE=""
 fi;
 
-# Other settings
-LOGO_SIZE=0.7 # Logo size in inches.
-CITY_ICON="city.pdf"
-BINOCULAR_ICON="binoculars.pdf"
-TELESCOPE_ICON="kstars.pdf"
+##### Some derived quantities that don't change
+TOTAL_OBJECTS=`cat ${OBJECTLIST_FILE} | wc -l` # Total number of objects
+PREFACE_FILE_WITHOUT_EXTENSION=${PREFACE_FILE%.[tT][eE][xX]}
+SKYCHART_SIZE=`echo "${SKYCHART_RATIO}*0.8" | bc -l`
+DSS_SIZE=`echo "(1-${SKYCHART_RATIO})*0.8" | bc -l`
 
-mkdir -p $BUILD_DIR; # Create the "build" directory
-
+##### Initialize various counters and "loop" variables
 list='' # List of objects for final processing
 checklist_count=10 # Count for objects in checklist to prevent overflowing the page. Start from 10 since the first page has a chapter title etc.
 object_count=0 # Count of the number of objects, that doesn't reset
-total_objects=`cat ${OBJECT_LIST} | wc -l` # Total number of objects
 
+##### Initialize the content of various files
 echo "" > ${BUILD_DIR}/Objects.tex
 echo "" > ${BUILD_DIR}/ConstType.txt
 echo "" > ${BUILD_DIR}/ObjectsByType.tex
@@ -102,9 +157,6 @@ Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 \hline
 " > ${BUILD_DIR}/Checklist.tex
 
-preface_file_without_extension=${PREFACE_FILE%.[tT][eE][xX]}
-
-# Generate the variable parts of the front matter, namely the title and the preface.
 echo "\title{\Huge ${PROJECT_NAME}}
 \maketitle
 
@@ -113,12 +165,14 @@ echo "\title{\Huge ${PROJECT_NAME}}
 
 \chapter*{Preface}
 
-\input{$preface_file_without_extension}" > ${BUILD_DIR}/FrontMatter.tex
+\input{$PREFACE_FILE_WITHOUT_EXTENSION}" > ${BUILD_DIR}/FrontMatter.tex
 
+##### Main loop -- loops over objects in the list
 while read object_list_line; do
 
     if [ $DEBUG ]; then echo "Processing line: " $object_list_line; fi;
 
+    #### Retrieve and set up object data in variables.
     object=`echo $object_list_line | awk -F'|' '{ print $1 }'` # Retrieve the name of the object from the list
     object_description=`echo $object_list_line | awk -F'|' '{ print $2 }'` # Retrieve a description of the object
     object_observability=`echo $object_list_line | awk -F'|' '{ print $3 }'` # Retrieve an observability string indicating whether the object is city / binocular observable
@@ -160,61 +214,147 @@ while read object_list_line; do
 	Alt_Name="--" # Use a dash for blank alternate names
     fi;
 
-#     zoomed_in_size=`echo $maj_axis*10 | bc -l`
-#     if test -z $zoomed_in_size -o $(echo "$zoomed_in_size <= 15" | bc -l) -eq 1; then
-# 	zoomed_in_size=15
-#     fi;
-# #    intermediate=`echo $zoomed_in_size*6 | bc -l`
-# #    zoomed_out=`echo $intermediate*4 | bc -l`
-#     zoomed_out=2400 # 40 degrees on the height dimension
-#     intermediate=`echo "e(( l($zoomed_in_size) + l($zoomed_out) )/2)" | bc -l` # Arithmetic mean of log(FOV)
-#     echo "Zoomed in: " $zoomed_in_size
-#     echo "Intermediate: " $intermediate
-#     echo "Zoomed out: " $zoomed_out
+    # skymap_aspect_ratio=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,x,/,' | bc -l`
+    # width=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,x.*$,,'`
+    # height=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,^.*x,,'`
 
-    # Get sky map aspect ratio and convert FOVs to degrees
-
-    skymap_aspect_ratio=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,x,/,' | bc -l`
-    width=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,x.*$,,'`
-    height=`qdbus org.kde.kstars /KStars org.kde.kstars.getSkyMapDimensions | sed 's,^.*x,,'`
-    FOV=`echo "20*${skymap_aspect_ratio}" | bc -l`
-
-    if [ $DEBUG ]; then echo "Capturing sky map with FOV = " $FOV; fi;
-
-    # Export all three sky images
-    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
-    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${FOV}
-#    echo "qdbus org.kde.kstars /KStars org.kde.kstars.exportImage `pwd`/${BUILD_DIR}/${object_underscored}_skychart.svg"
-    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage `pwd`/${BUILD_DIR}/${object_underscored}_skychart.svg
-    
-    if [ $DEBUG ]; then echo "Obtained skychart. Converting to PDF"; fi;
-
-    skychart_PDF=${BUILD_DIR}/${object_underscored}_skychart.pdf
-    inkscape -T -A $skychart_PDF ${BUILD_DIR}/${object_underscored}_skychart.svg
-
-    # Get DSS image
+    #### Get DSS image
     DSS_URL=`qdbus org.kde.kstars /KStars org.kde.kstars.getDSSURL "$object"`
     DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
     DSS=${BUILD_DIR}/${object_underscored}_dss.png
-    if [ ! -f $DSS ]; then
+    if [ ! -f "${DSS}" -o "${NO_REUSE_EXISTING_DSS}" ]; then
 	if [ $DEBUG ]; then echo "Obtaining DSS image. Query URL: " $DSS_URL; fi;
 	wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif
-	convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif $DSS
-	rm ${BUILD_DIR}/${object_underscored}_dss.gif
+
+	if [ $DSS_RESIZE ]; then
+	    convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif -resize ${DSS_RESIZE} $DSS
+	else
+	    convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif $DSS
+	fi;
+
+	if [ ! ${NO_DELETE_UNUSED} ]; then
+	    rm -f ${BUILD_DIR}/${object_underscored}_dss.gif
+	fi;
     else
 	if [ $DEBUG ]; then echo "DSS image found at ${DSS}. Assuming that we can use that."; fi;
     fi;
 
-    # Set up the LaTeX -- TODO: This is bad; we have to find a better way to write this.
+    #### Calculate FOVs and Acquire sky maps
+    if [ $DEBUG ]; then echo "Steering KStars to object ${object}. Make sure it exists in KStars as there is no error checking."; fi;
+    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
+    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the object.
+
+    if [ ! ${SINGLE_PAGE} ]; then
+	## Filenames to carry the 3 skycharts
+	zoomed_out_skychart=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_zoomed_out.svg
+	intermediate_skychart=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_intermediate.svg
+	zoomed_in_skychart=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_zoomed_in.svg
+
+	zoomed_out_skychart_PDF=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_zoomed_out.pdf
+	intermediate_skychart_PDF=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_intermediate.pdf
+	zoomed_in_skychart_PDF=`pwd`/${BUILD_DIR}/${object_underscored}_skychart_zoomed_in.pdf
+
+        ## FOV sizes, in degrees for multi-page mode
+	if [ -n "${FOV_ZOOMED_IN}" ]; then
+	    fov_zoomed_in=${FOV_ZOOMED_IN}
+	else
+	    fov_zoomed_in=`echo $maj_axis/6.0 | bc -l` # 10 x the major axis, in degrees
+	    if [ -z $fov_zoomed_in -o $(echo "$fov_zoomed_in <= 0.25" | bc -l) -eq 1 ]; then
+		fov_zoomed_in=0.25
+	    fi;
+	fi;
+	
+	if [ -n "${FOV_ZOOMED_OUT}" ]; then
+	    fov_zoomed_out=${FOV_ZOOMED_OUT}
+	else
+	    fov_zoomed_out=40
+	fi;
+	
+	if [ -n "${FOV_INTERMEDIATE}" ]; then
+	    fov_intermediate=${FOV_INTERMEDIATE}
+	else
+	    fov_intermediate=`echo "e(( l($fov_zoomed_in) + l($fov_zoomed_out) )/2)" | bc -l` # Arithmetic mean of log(FOV)
+	fi;
+	
+	if [ $DEBUG ]; then echo "FOVs in Degrees. Zoomed-in: ${fov_zoomed_in}; Intermediate: ${fov_intermediate}; Zoomed-out: ${fov_zoomed_out}"; fi;
+
+	if [ -f "$zoomed_in_skychart_PDF" -a ! "${NO_REUSE_EXISTING_SKYCHART}" ]; then
+	    echo "Warning: Using existing zoomed in sky chart for object ${object} -- ${zoomed_in_skychart_PDF}. If you changed FOVs, please delete the files.";
+	else
+	    if [ $DEBUG ]; then echo "Capturing zoomed in skychart for ${object}. FOV = ${fov_zoomed_in}"; fi;
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_in}
+	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${zoomed_in_skychart}"
+	    inkscape -T -A ${zoomed_in_skychart_PDF} ${zoomed_in_skychart}
+	fi;
+
+
+	if [ -f "$intermediate_skychart_PDF" -a ! "${NO_REUSE_EXISTING_SKYCHART}" ]; then
+	    echo "Warning: Using existing intermediate sky chart for object ${object} -- ${intermediate_skychart_PDF}. If you changed FOVs, please delete the files.";
+	else
+	    if [ $DEBUG ]; then echo "Capturing intermediate skychart for ${object}. FOV = ${fov_intermediate}"; fi;
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_intermediate}
+	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${intermediate_skychart}"
+	    inkscape -T -A ${intermediate_skychart_PDF} ${intermediate_skychart}
+	fi;
+
+
+	if [ -f "$zoomed_out_skychart_PDF" -a ! "${NO_REUSE_EXISTING_SKYCHART}" ]; then
+	    echo "Warning: Using existing zoomed out sky chart for object ${object} -- ${zoomed_out_skychart_PDF}. If you changed FOVs, please delete the files.";
+	else
+	    if [ $DEBUG ]; then echo "Capturing zoomed out skychart for ${object}. FOV = ${fov_zoomed_out}"; fi;
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_out}
+	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${zoomed_out_skychart}"
+	    inkscape -T -A ${zoomed_out_skychart_PDF} ${zoomed_out_skychart}
+	fi;
+
+	if [ ! ${NO_DELETE_UNUSED} ]; then
+	    if [ $DEBUG ]; then echo "Deleting unused SVG files."; fi;
+	    rm -f "${zoomed_out_skychart}" "${zoomed_in_skychart}" "${intermediate_skychart}"
+	else
+	    if [ $DEBUG ]; then echo "Keeping unused SVG files since NO_DELETE_UNUSED was defined."; fi;
+	fi;
+
+    else
+        ## FOV sizes, in degrees, for single-page mode
+	skychart=`pwd`/${BUILD_DIR}/${object_underscored}_skychart.svg
+	skychart_PDF=`pwd`/${BUILD_DIR}/${object_underscored}_skychart.pdf
+
+	if [ ${APPROX_FOV} ]; then
+	    fov=${APPROX_FOV}
+	else
+	    fov=20;
+	fi;
+
+	if [ -f "${skychart_PDF}" -a ! "${NO_REUSE_EXISTING_SKYCHART}" ]; then
+	    echo "Warning: Using existing sky chart for object ${object} -- ${skychart_PDF}. If you changed FOVs, please delete the files.";
+	else
+	    if [ $DEBUG ]; then echo "Capturing skychart for ${object}. FOV = ${fov}"; fi;
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV $"{fov}"
+	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${skychart}"
+	    inkscape -T -A ${skychart_PDF} ${skychart}
+	fi;
+
+	if [ ! ${NO_DELETE_UNUSED} ]; then
+	    if [ $DEBUG ]; then echo "Deleting unused SVG file."; fi;
+	    rm -f "${skychart}"
+	else
+	    if [ $DEBUG ]; then echo "Keeping unused SVG file since NO_DELETE_UNUSED was defined."; fi;
+	fi;
+
+    fi;
+	    
+    ##### Set up the observation pageLaTeX. FIXME: Is there a better way to write this?
     if [ $DEBUG ]; then echo "Generating TeX for the object's logging form"; fi;
     texfile=${BUILD_DIR}/${object_underscored}.tex
     echo "" > $texfile
+
+    ### First write out the common parts -- title, subtitle, data table, and description.
     echo "
 \section*{\center \Huge ${Name_Display}}
 \label{$object_underscored}
 \vspace{-2pt}
 \begin{center}
-\Large ${Object_Type} in ${Constellation} \\
+\Large ${Object_Type} in ${Constellation} \\\\
 \end{center}
 \vspace{2pt}
 
@@ -237,15 +377,21 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 {\small ${object_description_with_prefix}} \\\\
 \vspace{2pt}
 
+" >> $texfile
+
+    if [ ${SINGLE_PAGE} ]; then
+        ### In single page mode, put the single skychart and the DSS image side-by-side
+	if [ $DEBUG ]; then echo "Generating single page version"; fi;
+	echo "
 \begin{figure}[h!]
 \centering
-\begin{subfigure}[h!]{0.5\textwidth}
+\begin{subfigure}[h!]{${SKYCHART_SIZE}\textwidth}
 \centering
 \includegraphics[width=\textwidth]{${skychart_PDF}}
 \caption{Sky Chart}
 \end{subfigure}
 ~
-\begin{subfigure}[h!]{0.3\textwidth}
+\begin{subfigure}[h!]{${DSS_SIZE}\textwidth}
 \centering
 \includegraphics[width=\textwidth]{$DSS}
 \caption{DSS Image (${DSS_size_string})}
@@ -253,15 +399,56 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 
 \end{figure}
 
-\\\\
+\\\\ " >> $texfile
 
+	### Put in the logging form in the remaining space
+echo "
 \begin{figure*}[h!]
 \centering
-\includegraphics[width=0.8\textwidth]{Logging-Form.pdf}
+\includegraphics[width=0.85\textwidth,height=0.35\textheight,keepaspectratio]{${LOGFORM_FILE}}
 \end{figure*}
-
 " >> $texfile
-    
+
+    else
+	### For multi-page mode, just write the first page now
+	if [ $DEBUG ]; then echo "Generating two-page version"; fi;
+
+        ### In multi-page mode, put the lower two zoom levels side-by-side
+	echo "
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[h!]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{${zoomed_out_skychart_PDF}}
+\caption{Wide-field chart}
+\end{subfigure}
+~
+\begin{subfigure}[h!]{0.4\textwidth}
+\centering
+\includegraphics[width=\textwidth]{${intermediate_skychart_PDF}}
+\caption{Intermediate chart}
+\end{subfigure}
+
+\end{figure}
+
+\vspace{2pt}
+\\\\ " >> $texfile
+
+        ### Then put the wide-field chart filling the rest of the page
+	echo "
+\begin{figure*}[h!]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.35\textheight,keepaspectratio]{${zoomed_in_skychart_PDF}}
+\caption{Zoomed-in chart}
+\end{figure*}" >> $texfile
+
+	### We still have the second page to write, but we take a break here to put the overlays on the front page.
+    fi;
+
+
+    #### Draw the overlay figures -- a logo, if supplied; city, telescopes, binocular icons for indicating observability
+
+    ## If a logo file is supplied, render it. TODO: Make the position specifiable
     if [ -n "$LOGO_FILE" -a -f "$LOGO_FILE" ]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place logo from ${LOGO_FILE}"; fi;
 	echo "
@@ -279,6 +466,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
     fi;
 
 
+    ## If the object is city-observable, render a city icon and a telescope icon on the top-right
     if [[ "${object_observability}" == *C* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place city icon from ${CITY_ICON} and telescope icon from ${TELESCOPE_ICON}"; fi;
 	echo "
@@ -304,6 +492,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 " >> $texfile;
     fi;
 
+    ## If the object is binocular-observable, render a binocular icon on the top-right
     if [[ "${object_observability}" == *B* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON}"; fi;
 	echo "
@@ -320,6 +509,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 " >> $texfile;
     fi;
 
+    ## If the object is observable in the city with binoculars, additionally render a small binocular icon next to the city icon
     if [[ "${object_observability}" == *CB* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON} next to the city icon"; fi;
 	echo "
@@ -336,37 +526,54 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 " >> $texfile;
     fi;
 
-#    cd $BUILD_DIR
-#    pdflatex -interaction nonstopmode $texfile
-#    cd -
-    
+    ## If we are writing 2 pages, we should resume writing the second page.
+    if [ ! ${SINGLE_PAGE} ]; then
+	### If we are writing 2 pages per object, we have to still write the next page.
+
+	### So we first clear the page
+	echo "\clearpage" >> $texfile
+
+	### Put the DSS image, filling 0.9\textwidth or 0.5\textheight, whichever is smaller
+	echo "
+\begin{figure*}[h!]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${DSS}}
+\caption{DSS Image (${DSS_size_string})}
+\end{figure*}" >> $texfile
+
+	### Put the observing log form in the remaining space
+	echo "
+\begin{figure*}[h!]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${LOGFORM_FILE}}
+\end{figure*}
+" >> $texfile
+
+    fi;
+
+    #### Now we're done writing the TeX content into ${object_underscored}.tex. We need to put that into the larger Objects file.
+
+    ## Append the object to the list of objects
     list="$list ${object_underscored}.pdf"
     
-    # if [[ $constellations != *${Constellation}* ]]; then # Create a list of unique constellations
-    # 	constellations_unsort="${constellations} ${Constellation}";
-    # fi;
-    
-    # if [[ $types != *${ObjecT_Type}* ]]; then # Create a list of unique constellations
-    # 	types_unsort="${types} ${Object_Type}";
-    # fi;
-    
-    if [ $DEBUG ]; then echo "Concatenating rendered TeX into Objects.tex file in ${BUILD_DIR} directory"; fi;
+    if [ $DEBUG ]; then echo "Adding a \input for ${object_underscored}.tex into the Objects.tex file in the ${BUILD_DIR} directory"; fi;
     echo -e "\n%%%%%%%%%%%%%%%%%%%%%% ${object} %%%%%%%%%%%%%%%%%%%%%%" >> ${BUILD_DIR}/Objects.tex
-    echo -e "\n\\\\clearpage" >> ${BUILD_DIR}/Objects.tex
-    cat $texfile >> ${BUILD_DIR}/Objects.tex
-    echo '{\footnotesize \center This content is protected by Copyrights. See the~\nameref{Legal} chapter of this document for details.}' >> ${BUILD_DIR}/Objects.tex
-    
+    echo -e "\n\\\\clearpage" >> ${BUILD_DIR}/Objects.tex  ### Clear the page before starting every object's log form
+    echo "\input{${BUILD_DIR}/${object_underscored}}" >> ${BUILD_DIR}/Objects.tex
+
+    #### Write an entry into ConstType.txt to generate indexes containing objects by constellation and type
     if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
     echo "${Constellation}|${Object_Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
+    #### Write a LaTeX entry into the Checklist.tex file to include this object in the checklist
     if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
     echo "${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
 
-    # If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
+    ## If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
     object_count=$(($object_count+1))
     checklist_count=$(($checklist_count+1))
-    if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${total_objects}"; fi;
-    if [ ${checklist_count} -ge 65 -a ${object_count} -lt ${total_objects} ]; then
+    if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${TOTAL_OBJECTS}"; fi;
+    if [ ${checklist_count} -ge 65 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
 	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
 	echo "\end{tabular}
 }
@@ -383,33 +590,38 @@ Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 	checklist_count=0;
     fi;
 
-echo "Object-wise Progress: " `echo "100*${object_count}/${total_objects}" | bc`"%";
+    #### Write progress text to terminal
+    echo "Object-wise Progress: " `echo "100*${object_count}/${TOTAL_OBJECTS}" | bc`"%";
     
-done <$OBJECT_LIST;
+done <$OBJECTLIST_FILE;
 
+##### Close up the checklist file
 echo "\end{tabular}
 }" >> ${BUILD_DIR}/Checklist.tex
 
-# Generate sorted lists of constellations and types
+##### Generate sorted lists of constellations and types
 if [ $DEBUG ]; then echo "Making lists of constellations and types in Constellations.txt and Types.txt."; fi;
 cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $1 }' | sort | uniq > ${BUILD_DIR}/Constellations.txt
 cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $2 }' | sort | uniq > ${BUILD_DIR}/Types.txt
 
-# Generate object list by constellation
+##### Generate object list by constellation
 while read Constellation; do
     if [ $DEBUG ]; then echo "Writing constellation-wise index for constellation ${Constellation}"; fi;
     echo "\subsection*{${Constellation}}" >> ${BUILD_DIR}/ObjectsByConstellation.tex
     grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
 done < ${BUILD_DIR}/Constellations.txt;
 
-# Generate object list by type
+##### Generate object list by type
 while read Type; do
     if [ $DEBUG ]; then echo "Writing object-type-wise index for object type ${Type}"; fi;
     echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
     grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done < ${BUILD_DIR}/Types.txt;
 
-if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"
+##### Invoke PDFLaTeX twice to generate the PDFs
+if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"; fi;
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
 pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
 pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
 
