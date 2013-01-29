@@ -115,7 +115,6 @@ echo "\title{\Huge ${PROJECT_NAME}}
 
 \input{$preface_file_without_extension}" > ${BUILD_DIR}/FrontMatter.tex
 
-
 while read object_list_line; do
 
     if [ $DEBUG ]; then echo "Processing line: " $object_list_line; fi;
@@ -409,6 +408,9 @@ while read Type; do
     echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
     grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done < ${BUILD_DIR}/Types.txt;
+
+if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
 
 if [ $DEBUG ]; then echo "Script finished!"; fi;
 
