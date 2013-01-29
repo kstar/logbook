@@ -411,6 +411,7 @@ done < ${BUILD_DIR}/Types.txt;
 
 if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"
 pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
 
 if [ $DEBUG ]; then echo "Script finished!"; fi;
 
