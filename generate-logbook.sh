@@ -27,31 +27,39 @@
 DEBUG="1"
 
 if [ -z "$1" ]; then
-    echo "ERROR: No project name supplied. The project name is the title of the logbook."
-    echo "Invokation: ./generate-logbook.sh <project name> [object list file] [\"build\" directory]"
+    echo "ERROR: No book title supplied."
+    echo "Invokation: ./generate-logbook.sh <book title> <preface file> [object list file] [\"build\" directory]"
     exit 1;
 else
     PROJECT_NAME=$1
 fi;
 
-if [ -z "$2" ]; then
+if [ -z "$2" -o ! -f "$2" ]; then
+    echo "ERROR: Preface LaTeX input file \"$2\" is not a valid file."
+    echo "Invokation: ./generate-logbook.sh <book title> <preface file> [object list file] [\"build\" directory]"
+    exit 1;
+else
+    PREFACE_FILE=$2
+fi;
+
+if [ -z "$3" ]; then
     OBJECT_LIST='objectlist.txt'
 else
-    OBJECT_LIST=$2
+    OBJECT_LIST=$3
 fi;
 
 if [ $DEBUG ]; then echo $OBJECT_LIST; fi;
 
-if [ -z "$3" ]; then
+if [ -z "$4" ]; then
     BUILD_DIR='build'
 else
-    BUILD_DIR=$3
+    BUILD_DIR=$4
 fi;
 
-if [ -z "$4" ]; then
+if [ -z "$5" ]; then
     LOGO_FILE="logo.eps"
 else
-    LOGO_FILE=$4
+    LOGO_FILE=$5
 fi;
 
 if [ ! -f "$OBJECT_LIST" ]; then
@@ -93,6 +101,20 @@ Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 \hline
 \hline
 " > ${BUILD_DIR}/Checklist.tex
+
+preface_file_without_extension=${PREFACE_FILE%.[tT][eE][xX]}
+
+# Generate the variable parts of the front matter, namely the title and the preface.
+echo "\title{\Huge ${PROJECT_NAME}}
+\maketitle
+
+\frontmatter
+\tableofcontents
+
+\chapter*{Preface}
+
+\input{$preface_file_without_extension}" > ${BUILD_DIR}/FrontMatter.tex
+
 
 while read object_list_line; do
 
