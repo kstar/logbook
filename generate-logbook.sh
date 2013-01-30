@@ -138,7 +138,7 @@ DSS_SIZE=`echo "(1-${SKYCHART_RATIO})*0.8" | bc -l`
 
 ##### Initialize various counters and "loop" variables
 list='' # List of objects for final processing
-checklist_count=10 # Count for objects in checklist to prevent overflowing the page. Start from 10 since the first page has a chapter title etc.
+checklist_count=20 # Count for objects in checklist to prevent overflowing the page. Start from 10 since the first page has a chapter title etc.
 object_count=0 # Count of the number of objects, that doesn't reset
 
 ##### Initialize the content of various files
@@ -174,7 +174,7 @@ while read object_list_line; do
 
     #### Retrieve and set up object data in variables.
     object=`echo $object_list_line | awk -F'|' '{ print $1 }'` # Retrieve the name of the object from the list
-    object_description=`echo $object_list_line | awk -F'|' '{ print $2 }'` # Retrieve a description of the object
+    object_description=`echo $object_list_line | awk -F'|' '{ print $2 }' | sed 's/___REPLACE_PIPE___/|/g'` # Retrieve a description of the object. The sed is a hack to be able to use \verb|...| (verbatim)
     object_observability=`echo $object_list_line | awk -F'|' '{ print $3 }'` # Retrieve an observability string indicating whether the object is city / binocular observable
 
     if [ -n "$object_description" ]; then
@@ -188,6 +188,11 @@ while read object_list_line; do
     object_underscored=`echo $object | sed 's/ /_/g'`; # An underscored copy of the object for use in file names etc
 
     if [ $DEBUG ]; then echo "Underscored: " $object_underscored; fi;
+
+    # Look towards object before getting XML so that current RA / Dec are updated.
+    if [ $DEBUG ]; then echo "Steering KStars to object ${object}. Make sure it exists in KStars as there is no error checking."; fi;
+    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
+    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the object.
 
     XML=`qdbus org.kde.kstars /KStars org.kde.kstars.getObjectDataXML "$object"`
     maj_axis=`echo $XML | xmlstarlet sel -t -m "object" -v "Major_Axis"`
@@ -209,6 +214,9 @@ while read object_list_line; do
     else
 	Name_Display="${Name}"
     fi;
+
+    # Mirach's Ghost gets its own special hack to remove "(Galaxy not found :)" :D
+    Name_Display=`echo ${Name_Display} | sed 's/ (Galaxy not found :)//'`
 
     if test -z "$Alt_Name"; then
 	Alt_Name="--" # Use a dash for blank alternate names
@@ -240,9 +248,9 @@ while read object_list_line; do
     fi;
 
     #### Calculate FOVs and Acquire sky maps
-    if [ $DEBUG ]; then echo "Steering KStars to object ${object}. Make sure it exists in KStars as there is no error checking."; fi;
-    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
-    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the object.
+#    if [ $DEBUG ]; then echo "Steering KStars to object ${object}. Make sure it exists in KStars as there is no error checking."; fi;
+#    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
+#    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the object.
 
     if [ ! ${SINGLE_PAGE} ]; then
 	## Filenames to carry the 3 skycharts
@@ -432,7 +440,7 @@ echo "
 \end{figure}
 
 \vspace{2pt}
-\\\\ " >> $texfile
+" >> $texfile
 
         ### Then put the wide-field chart filling the rest of the page
 	echo "
@@ -573,7 +581,7 @@ echo "
     object_count=$(($object_count+1))
     checklist_count=$(($checklist_count+1))
     if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${TOTAL_OBJECTS}"; fi;
-    if [ ${checklist_count} -ge 65 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
+    if [ ${checklist_count} -ge 55 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
 	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
 	echo "\end{tabular}
 }
