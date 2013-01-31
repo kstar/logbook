@@ -232,7 +232,27 @@ while read object_list_line; do
     DSS=${BUILD_DIR}/${object_underscored}_dss.png
     if [ ! -f "${DSS}" -o "${NO_REUSE_EXISTING_DSS}" ]; then
 	if [ $DEBUG ]; then echo "Obtaining DSS image. Query URL: " $DSS_URL; fi;
-	wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif
+
+	wget $DSS_URL -O ${BUILD_DIR}/${object_underscored}_dss.gif 
+	ftype=`file "${BUILD_DIR}/${object_underscored}_dss.gif"`
+	if [[ $ftype != *GIF* ]]; then
+	    if [ $DEBUG ]; then echo "Failed on Blue. Trying to obtain a red plate"; fi;
+	    # We failed to download. Try Red plates
+	    wget `echo "$DSS_URL" | sed 's/_blue/_red/'` -O ${BUILD_DIR}/${object_underscored}_dss.gif 
+	    ftype=`file "${BUILD_DIR}/${object_underscored}_dss.gif"`
+	    if [[ $ftype != *GIF* ]]; then
+		if [ $DEBUG ]; then echo "Failed on Red. Trying to obtain an IR plate"; fi;
+		# Even the red plates failed. Try IR
+		wget `echo "$DSS_URL" | sed 's/_blue/_ir/'` -O ${BUILD_DIR}/${object_underscored}_dss.gif 
+		ftype=`file "${BUILD_DIR}/${object_underscored}_dss.gif"`
+	    fi;
+	fi;
+
+	## TODO: Add the band (IR / Blue / Red) of the DSS image to the caption
+
+	if [[ $ftype != *GIF* ]]; then
+	    echo "Warning: Could not download DSS image. Will proceed without one";
+	fi;
 
 	if [ $DSS_RESIZE ]; then
 	    convert -negate ${BUILD_DIR}/${object_underscored}_dss.gif -resize ${DSS_RESIZE} $DSS
