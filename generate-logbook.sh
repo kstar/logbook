@@ -150,9 +150,9 @@ echo "" > ${BUILD_DIR}/ObjectsByConstellation.tex
 echo "\resizebox{\textwidth}{!}{
 \centering
 %\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
-\begin{tabular}{|c|c|c|c|c|c||c|c|}
+\begin{tabular}{|r|c|c|c|c|c|c||c|c|}
 \hline
-Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 \hline
 \hline
 " > ${BUILD_DIR}/Checklist.tex
@@ -574,11 +574,11 @@ echo "
     echo "${Constellation}|${Object_Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
     #### Write a LaTeX entry into the Checklist.tex file to include this object in the checklist
+    object_count=$(($object_count+1)) # Increment object count before writing into Checklist, so serial numbers begin with 1.
     if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
-    echo "${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
+    echo "${object_count} & ${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
 
     ## If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
-    object_count=$(($object_count+1))
     checklist_count=$(($checklist_count+1))
     if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${TOTAL_OBJECTS}"; fi;
     if [ ${checklist_count} -ge 55 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
@@ -589,9 +589,9 @@ echo "
 \resizebox{\textwidth}{!}{
 \centering
 %\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
-\begin{tabular}{|c|c|c|c|c|c||c|c|}
+\begin{tabular}{|r||c|c|c|c|c|c||c|c|}
 \hline
-Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
 \hline
 \hline
 " >> ${BUILD_DIR}/Checklist.tex
