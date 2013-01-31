@@ -47,12 +47,10 @@ NGC 1553|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;gmbM;am 3*;a Dneb___R
 NGC 1566|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vg;svmbM;15d in RA___REPLACE_PIPE___ 
 NGC 1617|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE106;vg;vsmbMN 5''___REPLACE_PIPE___ 
 NGC 1672|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;smbMN___REPLACE_PIPE___ 
-Large Magellanic Cloud|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___eB;eeL;mBM;mE;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Local Group Memb;Many Cl+NB invl;SN 1987A ___REPLACE_PIPE___
 NGC 3147|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;vgvsvmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 79;vBN;many filam. narrow arms in lens ___REPLACE_PIPE___
 NGC 4589|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;lE;pgmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 273;P w NGC 4572 @ 7.5';NGC 4648 @ 22' ___REPLACE_PIPE___
 NGC 5907|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE155;vgBMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 759;vs bulge nearly hidden by strong dk lane; SN 1940a ___REPLACE_PIPE___
-NGC 1269|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;R;gmbM___REPLACE_PIPE___ 
-NGC 1291|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___comp 2;2';PA138;UGC 2666 ___REPLACE_PIPE___
+NGC 1291|(Also known as NGC 1269) \\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___comp 2;2';PA138;UGC 2666 ___REPLACE_PIPE___
 NGC 1300|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE;psvmbM___REPLACE_PIPE___ 
 NGC 1332|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;E114;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 60 ___REPLACE_PIPE___
 NGC 1395|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;E;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 58 ___REPLACE_PIPE___
@@ -158,8 +156,7 @@ NGC 4438|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;vlE;r;sf of 2___REPLACE_
 NGC 4442|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 156 ___REPLACE_PIPE___
 NGC 4457|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;smbMN;vBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 35 ___REPLACE_PIPE___
 NGC 4517|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE89;pB*in cont___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 5;NGC 4517A @ 17 ';long narrow streak w dust patches ___REPLACE_PIPE___
-NGC 4526|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE120;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 31;lenticular;between two 7th mag stars ___REPLACE_PIPE___
-NGC 4560|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 119 ___REPLACE_PIPE___
+NGC 4526|(Also NGC 4560) \\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE120;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 31;lenticular;between two 7th mag stars ___REPLACE_PIPE___
 NGC 4536|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;mE110;sbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 2;NGC 4533 @ 8.2';high tilt spiral w long curvd arms ___REPLACE_PIPE___
 NGC 4570|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;mE0;sbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 32;lens shaped;in field of R VIR ___REPLACE_PIPE___
 NGC 4596|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;gmbM;r;3 * f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 24;NGC 4608 @ 19 ';disc w projecting ansae ___REPLACE_PIPE___
