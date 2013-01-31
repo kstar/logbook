@@ -391,21 +391,21 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
         ### In single page mode, put the single skychart and the DSS image side-by-side
 	if [ $DEBUG ]; then echo "Generating single page version"; fi;
 	echo "
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \centering
 \begin{subfigure}[h!]{${SKYCHART_SIZE}\textwidth}
 \centering
 \includegraphics[width=\textwidth]{${skychart_PDF}}
-\caption{Sky Chart}
+\caption*{Sky Chart}
 \end{subfigure}
 ~
 \begin{subfigure}[h!]{${DSS_SIZE}\textwidth}
 \centering
 \includegraphics[width=\textwidth]{$DSS}
-\caption{DSS Image (${DSS_size_string})}
+\caption*{DSS Image (${DSS_size_string})}
 \end{subfigure}
 
-\end{figure}
+\end{figure*}
 
 \\\\ " >> $texfile
 
@@ -423,21 +423,21 @@ echo "
 
         ### In multi-page mode, put the lower two zoom levels side-by-side
 	echo "
-\begin{figure}[h!]
+\begin{figure*}[h!]
 \centering
 \begin{subfigure}[h!]{0.4\textwidth}
 \centering
 \includegraphics[width=\textwidth]{${zoomed_out_skychart_PDF}}
-\caption{Wide-field chart}
+\caption*{Wide-field chart}
 \end{subfigure}
 ~
 \begin{subfigure}[h!]{0.4\textwidth}
 \centering
 \includegraphics[width=\textwidth]{${intermediate_skychart_PDF}}
-\caption{Intermediate chart}
+\caption*{Intermediate chart}
 \end{subfigure}
 
-\end{figure}
+\end{figure*}
 
 \vspace{2pt}
 " >> $texfile
@@ -447,7 +447,7 @@ echo "
 \begin{figure*}[h!]
 \centering
 \includegraphics[width=0.9\textwidth,height=0.35\textheight,keepaspectratio]{${zoomed_in_skychart_PDF}}
-\caption{Zoomed-in chart}
+\caption*{Zoomed-in chart}
 \end{figure*}" >> $texfile
 
 	### We still have the second page to write, but we take a break here to put the overlays on the front page.
@@ -546,7 +546,7 @@ echo "
 \begin{figure*}[h!]
 \centering
 \includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${DSS}}
-\caption{DSS Image (${DSS_size_string})}
+\caption*{DSS Image (${DSS_size_string})}
 \end{figure*}" >> $texfile
 
 	### Put the observing log form in the remaining space
