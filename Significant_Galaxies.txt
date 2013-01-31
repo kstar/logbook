@@ -1,0 +1,180 @@
+NGC 891|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vmE22___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 19;NGC 1023 group;Lord Rosse drawing shows dark lane ___REPLACE_PIPE___
+NGC 772|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;R;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 112;Several tightly coiled arms br on NW side;UGC 1466 ___REPLACE_PIPE___
+NGC 5248|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;E150;psbMRN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 34;eBN in vB lens w many dk lanes ___REPLACE_PIPE___
+NGC 2403|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!! cB;eL;vmE;vgmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 44;in M81 group;many well res irreg arms;broad bar ___REPLACE_PIPE___
+NGC 2655|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;lE 90;gsvmbM;diff___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 288;large nucleus w asym dk matter in lens;faint outer whirls ___REPLACE_PIPE___
+NGC 278|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;2 st 10 nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 159;Lg B nucl;sev knotty massive arms;B part sharp edge;UGC 528 ___REPLACE_PIPE___
+NGC 3557|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;R;pgmbM;1st of 3___REPLACE_PIPE___ 
+NGC 4945|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vmE39___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
+NGC 4976|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gmbM___REPLACE_PIPE___ 
+NGC 5102|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;svmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___17' nf Iota CEN ___REPLACE_PIPE___
+NGC 5128|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!vB;vL;vmE122;bifid___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Dark central band;radio source ___REPLACE_PIPE___
+NGC 5253|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E45;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 638;SN in 1895 & 1975 ___REPLACE_PIPE___
+NGC 578|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;pmE;gpmbM___REPLACE_PIPE___ 
+NGC 584|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;p of 2___REPLACE_PIPE___ 
+NGC 908|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 153 ___REPLACE_PIPE___
+NGC 936|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;R;mbMN;p of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 23;Thick central bar;P w NGC 941 12' foll ___REPLACE_PIPE___
+NGC 2217|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;psmbM;r___REPLACE_PIPE___ 
+NGC 2775|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;vgvsmbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 2;N in B smooth lens;many knotty arms form dk lane ___REPLACE_PIPE___
+NGC 1792|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE314;glbM;rr___REPLACE_PIPE___ 
+NGC 1808|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;E;psbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___F outer arms ___REPLACE_PIPE___
+NGC 4203|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 175 ___REPLACE_PIPE___
+NGC 4251|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;E;vsvmbMN;*6-7 f 90''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 89;lens shape ___REPLACE_PIPE___
+NGC 4274|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;E90;mbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 75;Saturn-like inner ring w F outer halo ___REPLACE_PIPE___
+NGC 4278|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;r;1 of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 90;Triple chain w NGC 4283 @ 3.6';NGC 4286 @ 8.8' ___REPLACE_PIPE___
+NGC 4314|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;E150;sbM;* np;eBN w spir struct___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 76 ___REPLACE_PIPE___
+NGC 4414|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;E;g;vsmbM*;B diff N in B bulge___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 77 ___REPLACE_PIPE___
+NGC 4450|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;gvmbM*;r;B* sp___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 56 ___REPLACE_PIPE___
+NGC 4494|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;vsmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 83 ___REPLACE_PIPE___
+NGC 4559|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE150;gbM;3 * f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 92;SN 1941a;multi arm spiral ___REPLACE_PIPE___
+NGC 4565|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!B;eL;eE135;vsbMN = *10-11___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 24;NGC 4562 @ 13.4';classic edge-on galaxy ___REPLACE_PIPE___
+NGC 4651|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;E90;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 12 ___REPLACE_PIPE___
+NGC 4725|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;E;vg;vsvmbM;eBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 84;P w NGC 4712 @ 12 ' ___REPLACE_PIPE___
+NGC 4111|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;mE151;vsvBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 195;NGC 4109 @ 4.8';UGC 7103;Ho 333a ___REPLACE_PIPE___
+NGC 4143|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;R;vg;vsbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 54 ___REPLACE_PIPE___
+NGC 4151|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;vsmbMBN;p of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 165;P w NGC 4145;NGC 4156 @ 5.2';Ho 345c @ 8.8' ___REPLACE_PIPE___
+NGC 4214|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;iE;biN;=NGC 4208___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 95 ___REPLACE_PIPE___
+NGC 4449|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;mE;D or bifid;rrr;*F;B center w N or *___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 213 ___REPLACE_PIPE___
+NGC 4490|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE130;r;sf of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 198;disrupted;P w NGC 4485 @ 3.5' ___REPLACE_PIPE___
+NGC 4618|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;E;mbM;curved branch n___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 178;P w NGC 4625 @ 8.3' ___REPLACE_PIPE___
+NGC 4631|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;eE70;bMN;* att n___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 42;P w NGC 4627 @ 2.5' ___REPLACE_PIPE___
+NGC 5005|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE66;vsbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 96;P w NGC 5033;eBN in B lens;sev knotty arms ___REPLACE_PIPE___
+NGC 5033|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;E167;smbM;vBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 97;P w NGC 5005;svBN in B bulge w spir patt of dk lanes ___REPLACE_PIPE___
+NGC 5195|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;lE;vgbM;inv M51___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 186;Interacting P w M 51;peculiar ___REPLACE_PIPE___
+NGC 1533|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;R;smbM;2*10 nf___REPLACE_PIPE___ 
+NGC 1549|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___P w NGC 1553 ___REPLACE_PIPE___
+NGC 1553|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;gmbM;am 3*;a Dneb___REPLACE_PIPE___ 
+NGC 1566|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vg;svmbM;15d in RA___REPLACE_PIPE___ 
+NGC 1617|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE106;vg;vsmbMN 5''___REPLACE_PIPE___ 
+NGC 1672|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;smbMN___REPLACE_PIPE___ 
+Large Magellanic Cloud|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___eB;eeL;mBM;mE;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Local Group Memb;Many Cl+NB invl;SN 1987A ___REPLACE_PIPE___
+NGC 3147|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;vgvsvmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 79;vBN;many filam. narrow arms in lens ___REPLACE_PIPE___
+NGC 4589|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;lE;pgmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 273;P w NGC 4572 @ 7.5';NGC 4648 @ 22' ___REPLACE_PIPE___
+NGC 5907|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE155;vgBMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 759;vs bulge nearly hidden by strong dk lane; SN 1940a ___REPLACE_PIPE___
+NGC 1269|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;R;gmbM___REPLACE_PIPE___ 
+NGC 1291|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___comp 2;2';PA138;UGC 2666 ___REPLACE_PIPE___
+NGC 1300|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE;psvmbM___REPLACE_PIPE___ 
+NGC 1332|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;E114;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 60 ___REPLACE_PIPE___
+NGC 1395|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;E;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 58 ___REPLACE_PIPE___
+NGC 1407|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;svmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 107 ___REPLACE_PIPE___
+NGC 1532|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vmE32;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___NGC 1531 np 2';Nearly edge-on ___REPLACE_PIPE___
+NGC 1537|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;lE;psvmbM___REPLACE_PIPE___ 
+NGC 1097|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE151;vbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 48 ___REPLACE_PIPE___
+NGC 1201|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;vlE;r;S* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 109 ___REPLACE_PIPE___
+NGC 1316|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;vlE;vsvmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1344|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;iR;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 257 ___REPLACE_PIPE___
+NGC 1350|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE;vmbMRN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1365|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!;vB;vL;mE;BN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Best example of barred spiral;Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1379|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gpmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1380|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;psbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1387|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;gmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1399|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;psbM;rr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 1398|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;vmbM___REPLACE_PIPE___ 
+NGC 1404|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
+NGC 7144|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;mbMN___REPLACE_PIPE___ 
+NGC 7213|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___16' SE from Alpha Gru ___REPLACE_PIPE___
+NGC 7410|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vmE43;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
+NGC 7418|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vlE;vglbM___REPLACE_PIPE___ 
+NGC 7552|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;mE90;vsbM *13___REPLACE_PIPE___ 
+NGC 1433|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;pmE;vsvmbM*10___REPLACE_PIPE___ 
+NGC 1512|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;R;bM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___lenticular ___REPLACE_PIPE___
+NGC 2784|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE 64 deg;gmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 59 ___REPLACE_PIPE___
+NGC 3585|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E;vsmbMN;2 B st tri___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 269 ___REPLACE_PIPE___
+NGC 3621|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E 160;am 4 st___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 241 ___REPLACE_PIPE___
+NGC 3923|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;lE;gmbM;r;vS* sp inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 259 ___REPLACE_PIPE___
+NGC 5061|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;vsmbM;*1Of___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 138 ___REPLACE_PIPE___
+NGC 5101|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;lE;psbM*___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 567 ___REPLACE_PIPE___
+NGC 7049|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;E;mbM___REPLACE_PIPE___ 
+NGC 2903|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E;gmbM;r;sp of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 56;short B nucleus bar;fine multi arm spiral ___REPLACE_PIPE___
+NGC 3193|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;vlE;pslbM;*9.5;354;80''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 45;NGC 3189-90 group;vB center in smooth nebula ___REPLACE_PIPE___
+NGC 3377|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;lE;svmbMBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 99;Leo group ___REPLACE_PIPE___
+NGC 3384|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;psmbM;2nd of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 18;Leo group;in triple group w NGC 3379 and NGC 3389 ___REPLACE_PIPE___
+NGC 3412|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;lE 135;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 27;Leo group ___REPLACE_PIPE___
+NGC 3489|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;lE 80;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 101;Leo group ___REPLACE_PIPE___
+NGC 3521|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;mE 140;vsmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 13 ___REPLACE_PIPE___
+NGC 3593|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;E 90;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 29;in NGC 3607 group;BN w L bulge and dk lane ___REPLACE_PIPE___
+NGC 3607|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;vmbM;2nd of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 50;brightest in group;P w NGC 3608 at 6.2';PA10 ___REPLACE_PIPE___
+NGC 3608|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;3rd of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 51;NGC 3607 group;comp 5.9';PA251;0.8'X0.3' ___REPLACE_PIPE___
+NGC 3640|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 33;P w NGC 3641 at 2.5';PA170 ___REPLACE_PIPE___
+NGC 3810|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;vlE___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 21 ___REPLACE_PIPE___
+NGC 2859|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 137;bright nucleus in diff. bar w diff. blobs ___REPLACE_PIPE___
+NGC 3245|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;E 0;smbMEN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 86 ___REPLACE_PIPE___
+NGC 3344|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;gbM;* inv;2 st f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 81 ___REPLACE_PIPE___
+NGC 3486|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;gmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 87 ___REPLACE_PIPE___
+NGC 2683|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE39;gmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 200;peanut-shaped bulge;many filam; arm w dk lanes 1 side ___REPLACE_PIPE___
+NGC 6684|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;vg;psvmbM___REPLACE_PIPE___ 
+NGC 6744|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;vg;svmbM;r___REPLACE_PIPE___ 
+NGC 7814|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;E;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 240;Equatorial dust lane;Nearly edge-on ___REPLACE_PIPE___
+NGC 7217|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;gbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 207;vB diff Nuc .35'X0.27'many knotty arms ___REPLACE_PIPE___
+NGC 7331|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;pmE163;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 53;UGC 12113;Brightest in group of F obj;sev dark lanes ___REPLACE_PIPE___
+NGC 1023|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE;vvmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 156;brtst in grp;more neb 10' E;lens shp F tuft on E tip ___REPLACE_PIPE___
+NGC 524|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;mbM;4S* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 151 ___REPLACE_PIPE___
+NGC 2613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vmE 110 deg___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 266;1.2 deg W from D* Burnham 208;Nearly edge-on ___REPLACE_PIPE___
+NGC 1543|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E;smbMN=*11___REPLACE_PIPE___ 
+NGC 1559|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE;vgpmbM;*14 att n___REPLACE_PIPE___ 
+NGC 55|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE;triN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Sculptor Galaxy Group ___REPLACE_PIPE___
+NGC 134|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE 47 degrees;psbM;f of 2;*10 np 45''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
+NGC 253|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!vvB;vvL;vmE 54 degrees;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 1;Sandage-arms are more defined by dust than * ___REPLACE_PIPE___
+NGC 613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE118;sbM;* nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 281 ___REPLACE_PIPE___
+NGC 5921|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;iR;vsbM*12;am *___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 148;eBN in B bar ___REPLACE_PIPE___
+NGC 3166|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;psmbM;2nd of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 3;brightest in group ___REPLACE_PIPE___
+NGC 3169|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;vlE;pgmbM;*11;78;80'';3rd of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 4;eF corona vis to approx 8X6;P w NGC 3166 ___REPLACE_PIPE___
+NGC 6868|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;pgvmbM___REPLACE_PIPE___ 
+NGC 292|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!!vvB;eeL;iR;st 12...18___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Memb Local Group;LMC 22 deg distant ___REPLACE_PIPE___
+NGC 2681|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vg;vsmbM *10___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 242;Compact center and distinct spiral arms ___REPLACE_PIPE___
+NGC 2768|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;lE;psbM;LBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 250;vsvB center; smooth neb in lens and external envelope ___REPLACE_PIPE___
+NGC 2787|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;lE 90 deg;mbM;r;vS* sf inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 216;B nucl in B inner lens;strong narrow bar w blobs ___REPLACE_PIPE___
+NGC 2841|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE151;vsmbM = *10___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 205;fine spiral w symmetrical whorls ___REPLACE_PIPE___
+NGC 2950|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;vgvmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 68 ___REPLACE_PIPE___
+NGC 2976|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;mE152;st inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 285;B main body;chaotic inner w many dk lane;F outer disc ___REPLACE_PIPE___
+NGC 2985|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;R;psmbM;* inv f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 78;diff BN;many poor res knotty arms; P w NGC 3027 at 25' ___REPLACE_PIPE___
+NGC 3079|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;mE 135;long streak___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 47;brightest of 3;comp 6.5 nf;0.9'X0.4';mag 14.6 ___REPLACE_PIPE___
+NGC 3077|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;mbM;R w ray___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 286;M81 group;dust streamers tending to radial direction ___REPLACE_PIPE___
+NGC 3310|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;vg;vsmbMN 15''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 60;UGC 5786 ___REPLACE_PIPE___
+NGC 3610|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;lE 90;vsvmbMSN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 270;comp 3.7';PA232;0.25'X0.25' ___REPLACE_PIPE___
+NGC 3613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;mE 305;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 271;P w NGC 3619 at 15.7' PA158 ___REPLACE_PIPE___
+NGC 3665|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;iR;pgmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 219;P w NGC 3658 ___REPLACE_PIPE___
+NGC 3675|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;vmE 0;vsmbMN;many st p___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 194;in field of 56 UMa ___REPLACE_PIPE___
+NGC 3893|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 738;P w NGC 3896 at 3.9';PA125 ___REPLACE_PIPE___
+NGC 3898|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;lE;svmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 228;comp 5 ';PA60;0.7'X0.12';NGC 3888 15' south ___REPLACE_PIPE___
+NGC 3938|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;R;bM;pBN;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 203;Fine face on spiral ___REPLACE_PIPE___
+NGC 3941|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;smbM *9___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 173 ___REPLACE_PIPE___
+NGC 3945|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gmbM;r;*12 sp___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 251 ___REPLACE_PIPE___
+NGC 3953|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;E 0;vsbM;fine spiral___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 45;comps 3.9';PA190;0.3'X0.1';4.6';PA156;0.4'X0.4' ___REPLACE_PIPE___
+NGC 3998|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;vg;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 229;comp 4.7';PA145;0.3'X0.3' ___REPLACE_PIPE___
+NGC 4026|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;mE176;vsvmbM;BN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 223;edge on lens shape ___REPLACE_PIPE___
+NGC 4036|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;E;vBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 253;NGC 4041 @ 15';spindle shape ___REPLACE_PIPE___
+NGC 4051|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;E;vgvsmbM*11;vseBN or *___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 56;thick spiral arms ___REPLACE_PIPE___
+NGC 4088|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;E55;lbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 206;P w NGC 4085 11' to south;distorted spirl arms;UGC 7081 ___REPLACE_PIPE___
+NGC 4605|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;vmE118;glbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 254 ___REPLACE_PIPE___
+NGC 5322|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;iR;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 256;B diff. N;smooth neb ___REPLACE_PIPE___
+NGC 4030|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vlE;psmbM;B* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 121;fine nearly face on spiral ___REPLACE_PIPE___
+NGC 4216|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE17;sbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 35;UGC 7284;edge on streak;two other in field ___REPLACE_PIPE___
+NGC 4365|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;vlE;gl;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 30;NGC 4370 @ 10 ' ___REPLACE_PIPE___
+NGC 4371|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 22 ___REPLACE_PIPE___
+NGC 4429|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;cE;psbM;*10 nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 65;oval w large outer ring ___REPLACE_PIPE___
+NGC 4435|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;R;np of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 28;Markarian's chain;NGC 4438 @ 4.3' SSE ___REPLACE_PIPE___
+NGC 4438|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;vlE;r;sf of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 28;Markarian's chain;NGC 4435 @ 4.4';long filaments ___REPLACE_PIPE___
+NGC 4442|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 156 ___REPLACE_PIPE___
+NGC 4457|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;smbMN;vBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 35 ___REPLACE_PIPE___
+NGC 4517|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE89;pB*in cont___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 5;NGC 4517A @ 17 ';long narrow streak w dust patches ___REPLACE_PIPE___
+NGC 4526|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE120;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 31;lenticular;between two 7th mag stars ___REPLACE_PIPE___
+NGC 4560|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 119 ___REPLACE_PIPE___
+NGC 4536|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;mE110;sbM;er___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 2;NGC 4533 @ 8.2';high tilt spiral w long curvd arms ___REPLACE_PIPE___
+NGC 4570|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;mE0;sbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 32;lens shaped;in field of R VIR ___REPLACE_PIPE___
+NGC 4596|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;gmbM;r;3 * f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 24;NGC 4608 @ 19 ';disc w projecting ansae ___REPLACE_PIPE___
+NGC 4636|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;iR;vgvmbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 38 ___REPLACE_PIPE___
+NGC 4643|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;lE;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 10;Saturn-like central mass w projecting ansae ___REPLACE_PIPE___
+NGC 4665|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;iR;mbM;*10 sp___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 142 ___REPLACE_PIPE___
+NGC 4666|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;mE45;psbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 15;NGC 4668 @ 7.3';NGC 4653 @ 20 ';edge on ___REPLACE_PIPE___
+NGC 4698|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;iR;bM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 8 ___REPLACE_PIPE___
+NGC 4754|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;p of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 25;P w NGC 4762 11' to NW ___REPLACE_PIPE___
+NGC 4753|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vlE;vglbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 16;SN 1965i ___REPLACE_PIPE___
+NGC 5018|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;S;R;mbMpBN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 746 ___REPLACE_PIPE___
+NGC 5084|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cS;vlE90___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 313 ___REPLACE_PIPE___
+NGC 5363|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;*8 nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 6;P w NGC 5364 at 14.5' 2 B dif N in contact ___REPLACE_PIPE___
+NGC 5566|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;r;*f1.5'___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 144;double galaxy ___REPLACE_PIPE___
+NGC 5701|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;mbM;*11p15''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 575;Several vF;vS comps in field ___REPLACE_PIPE___
+NGC 5746|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;vmE170;bM;BN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 126;vsBN in B cent.bulge;NGC 5740 at 18';edge on ___REPLACE_PIPE___
+NGC 5813|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 127;In NGC 5846 group;P w NGC 5814 at 5';NGC 8506 at 21' ___REPLACE_PIPE___
+NGC 5846|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;psbMN;F* inv S;n of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 128;Brightest in group;P w NGC 5846A at 1';NGC 5850 10'ESE ___REPLACE_PIPE___
