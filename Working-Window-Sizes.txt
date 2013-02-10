@@ -1,4 +1,4 @@
 For multi-page Letter: 533x510
 For single-page Letter: 533x430
 For multi-page A4: 550x440
-
+For single-page A4: 550x440

@@ -197,6 +197,7 @@ while read object_list_line; do
     if [ $DEBUG ]; then echo "Steering KStars to object ${object}. Make sure it exists in KStars as there is no error checking."; fi;
     qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object"
     qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the object.
+    qdbus org.kde.kstars /KStars org.kde.kstars.lookTowards "$object" # KStars has some weird bug of landing slightly off from the object. Calling this again is a hack to get right on the obj
 
     XML=`qdbus org.kde.kstars /KStars org.kde.kstars.getObjectDataXML "$object"`
     maj_axis=`echo $XML | xmlstarlet sel -t -m "object" -v "Major_Axis"`
@@ -234,6 +235,7 @@ while read object_list_line; do
     DSS_URL=`qdbus org.kde.kstars /KStars org.kde.kstars.getDSSURL "$object"`
     DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
     DSS=${BUILD_DIR}/${object_underscored}_dss.png
+    DSS_band="B"
     if [ ! -f "${DSS}" -o "${NO_REUSE_EXISTING_DSS}" ]; then
 	if [ $DEBUG ]; then echo "Obtaining DSS image. Query URL: " $DSS_URL; fi;
 
@@ -244,11 +246,13 @@ while read object_list_line; do
 	    # We failed to download. Try Red plates
 	    wget `echo "$DSS_URL" | sed 's/_blue/_red/'` -O ${BUILD_DIR}/${object_underscored}_dss.gif 
 	    ftype=`file "${BUILD_DIR}/${object_underscored}_dss.gif"`
+	    DSS_band="R"
 	    if [[ $ftype != *GIF* ]]; then
 		if [ $DEBUG ]; then echo "Failed on Red. Trying to obtain an IR plate"; fi;
 		# Even the red plates failed. Try IR
 		wget `echo "$DSS_URL" | sed 's/_blue/_ir/'` -O ${BUILD_DIR}/${object_underscored}_dss.gif 
 		ftype=`file "${BUILD_DIR}/${object_underscored}_dss.gif"`
+		DSS_band="I"
 	    fi;
 	fi;
 
@@ -256,6 +260,12 @@ while read object_list_line; do
 
 	if [[ $ftype != *GIF* ]]; then
 	    echo "Warning: Could not download DSS image. Will proceed without one";
+	    DSS_band="?"
+	    DSS_size_string="?"
+	    rm -f ${BUILD_DIR}/${object_underscored}_dss.gif # Make sure it's not re-used in future
+	    rm -f ${BUILD_DIR}/${object_underscored}_dss_metadata.txt
+	else
+	    echo "(${DSS_band}, ${DSS_size_string})" > ${BUILD_DIR}/${object_underscored}_dss_metadata.txt
 	fi;
 
 	if [ $DSS_RESIZE ]; then
@@ -269,6 +279,12 @@ while read object_list_line; do
 	fi;
     else
 	if [ $DEBUG ]; then echo "DSS image found at ${DSS}. Assuming that we can use that."; fi;
+    fi;
+
+    if [ -f ${BUILD_DIR}/${object_underscored}_dss_metadata.txt ]; then
+	DSS_metadata=`cat "${BUILD_DIR}/${object_underscored}_dss_metadata.txt"`
+    else
+	DSS_metadata="(details unknown)"
     fi;
 
     #### Calculate FOVs and Acquire sky maps
@@ -434,7 +450,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \begin{subfigure}[h!]{${DSS_SIZE}\textwidth}
 \centering
 \includegraphics[width=\textwidth]{$DSS}
-\caption*{DSS Image (${DSS_size_string})}
+\caption*{DSS Image ${DSS_metadata}}
 \end{subfigure}
 
 \end{figure*}
