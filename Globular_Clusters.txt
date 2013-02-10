@@ -1,0 +1,68 @@
+NGC 6101|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;iR;vgbM;*14___REPLACE_PIPE___ 
+NGC 6749|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___L;lC;st L&S___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Globular absorbed by 7 mags; Berkley 42 mistaken for open cl ___REPLACE_PIPE___
+NGC 6760|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;vglbM (Auw. 44)___REPLACE_PIPE___ 
+NGC 6352|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___globular ESO 228-SC003 ___REPLACE_PIPE___
+NGC 6362|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;vgmbM;rrr___REPLACE_PIPE___ 
+NGC 6397|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;Ri;st 10..___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Poss nearest glob ___REPLACE_PIPE___
+NGC 2808|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___! vL;eRi;vgeCM 45 sec d;st 13...15___REPLACE_PIPE___ 
+NGC 5139|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!!eL;B;eRi;vvC___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Stars mags 11...;finest globular;magnificent object ___REPLACE_PIPE___
+NGC 5286|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;rrr;st 15___REPLACE_PIPE___ 
+NGC 1851|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!vB;vL;R;vsvvbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___X-ray source;vRi w F* ___REPLACE_PIPE___
+NGC 4147|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;gbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 19;Stars F ___REPLACE_PIPE___
+NGC 4153|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E;bM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 11;equals NGC 4147; best possible ID ___REPLACE_PIPE___
+NGC 6541|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;R;eC;gbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Stars mags 13... ___REPLACE_PIPE___
+NGC 6934|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;rrr;*16...___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 103;*10m 2' west ___REPLACE_PIPE___
+NGC 7006|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 52;Stars eF;very remote globular ___REPLACE_PIPE___
+NGC 1855|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;vB;L;R;st 12___REPLACE_PIPE___ 
+NGC 6229|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;disc;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 50;Wm. Herschel placed in Planetary category by mistake ___REPLACE_PIPE___
+NGC 1261|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;rr___REPLACE_PIPE___ 
+NGC 5694|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cS;R;psbM;r;* 9.5 sp___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 196;Rich w eF stars;distant globular ___REPLACE_PIPE___
+NGC 5824|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;S;Stell Nuc___REPLACE_PIPE___ 
+NGC 5927|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;R;vgbM;rrr;st 15___REPLACE_PIPE___ 
+NGC 5986|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!;vB;L;R;vgbM;st 13...15___REPLACE_PIPE___ 
+NGC 2419|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;lE 90deg;vgbM;*7-8 267deg;4' dist___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 218;Most distant globular;Brightest * 17 mag ___REPLACE_PIPE___
+NGC 1841|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;iR;vsbM;r___REPLACE_PIPE___ 
+NGC 4372|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;R;* 12...16___REPLACE_PIPE___ 
+NGC 4833|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;g;vsbM;st 12___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___DRKNB Dark Doodad to the west ___REPLACE_PIPE___
+NGC 5946|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;vglbM;rrr;st 16___REPLACE_PIPE___ 
+NGC 6235|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;iR;rrr;*14..16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 584 ___REPLACE_PIPE___
+NGC 6284|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;CM;st16...___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 11 ___REPLACE_PIPE___
+NGC 6287|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;R;gpmCM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 195 ___REPLACE_PIPE___
+NGC 6293|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;psbM;st16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 12 ___REPLACE_PIPE___
+NGC 6304|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;R;lbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 147 ___REPLACE_PIPE___
+NGC 6316|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;gvmBM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 45 ___REPLACE_PIPE___
+NGC 6325|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;R;rr___REPLACE_PIPE___ 
+NGC 6342|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;lE;eR___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 149 ___REPLACE_PIPE___
+NGC 6356|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;vgvmBM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 48 ___REPLACE_PIPE___
+NGC 6401|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;*12F inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 44 ___REPLACE_PIPE___
+NGC 6517|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;rr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 199 ___REPLACE_PIPE___
+NGC 6752|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;iR;st11..16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fine cluster ___REPLACE_PIPE___
+NGC 2298|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;iR;gbM;rr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Stars eF ___REPLACE_PIPE___
+NGC 288|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;lE;st 12...16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 20;loose structured globular ___REPLACE_PIPE___
+NGC 6144|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;cL;mC;gbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 10 ___REPLACE_PIPE___
+NGC 6139|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;rr___REPLACE_PIPE___ 
+NGC 6388|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;R;pg;psvmbM___REPLACE_PIPE___ 
+NGC 6441|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;vgmbM___REPLACE_PIPE___ 
+NGC 6453|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;iR;pmbM;r___REPLACE_PIPE___ 
+NGC 6496|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___neb+Cl;pL;mE;gvlbM___REPLACE_PIPE___ 
+NGC 6712|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;irr;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 47 ___REPLACE_PIPE___
+NGC 6535|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;vS;vS neb *p___REPLACE_PIPE___ 
+NGC 6440|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;bM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 150;* eF ___REPLACE_PIPE___
+NGC 6522|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gvmBM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 49 ___REPLACE_PIPE___
+NGC 6528|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;cS;R;gbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 200;* mags 16...;Gamma Sgr in field ___REPLACE_PIPE___
+NGC 6540|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;S;lE;er or Cl___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VII 202;12 F * ___REPLACE_PIPE___
+NGC 6558|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;glbM;rrr___REPLACE_PIPE___ 
+NGC 6569|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;R;rrr;*15..___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 201;D* Burnham 1353 in field ___REPLACE_PIPE___
+NGC 6624|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;rrr;st16..___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 50 ___REPLACE_PIPE___
+NGC 6638|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;R;rr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 51 ___REPLACE_PIPE___
+NGC 6642|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;iR;gpmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 205;* mags 15.... ___REPLACE_PIPE___
+NGC 6652|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;lE;rrr;st15___REPLACE_PIPE___ 
+NGC 6723|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vL;vlE;vgbM;rrr___REPLACE_PIPE___ 
+NGC 6584|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;gmbM;rrr___REPLACE_PIPE___ 
+NGC 104|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!! vB;vL;eRi;vmCM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___X-ray source;* mags 11...;splendid cluster ___REPLACE_PIPE___
+NGC 362|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vC;vmbM___REPLACE_PIPE___ 
+NGC 3201|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vL;iR;lCM;st 13...16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___* mags 13...; loose structured globular ___REPLACE_PIPE___
+NGC 5634|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;R;gbM;rrr;st 19...;*8 sf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 70;11 mag star on E edge ___REPLACE_PIPE___
+NGC 5897|(Rather tough) \\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;viR;vgbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 19 ___REPLACE_PIPE___
+NGC 5053|(Challenge!) \\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;vF;pL;iR;vgbM;st 15___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 7;Low surf brightness;1 deg sf M 53 ___REPLACE_PIPE___ \\\\
+NGC 5466|(Challenge!) \\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;L;vRi;vmC;st 11...___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 9 ___REPLACE_PIPE___
