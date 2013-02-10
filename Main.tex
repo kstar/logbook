@@ -40,6 +40,8 @@
 \fancyfoot[RO, LE]{\thepage}
 \pagestyle{fancy}
 
+\newif\ifletterpaper
+
 \begin{document}
 
 \author{The Astronomy Logbook Project}
@@ -293,6 +295,8 @@ section.
 \addtolength{\textwidth}{0.7in}
 \setlength{\parindent}{0cm}
 \setlength{\hangindent}{0cm}
+
+\letterpaperfalse
 
 \input{build/Objects}
 

@@ -163,6 +163,13 @@ Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second
 
 echo "\title{\Huge ${PROJECT_NAME}}
 \maketitle
+{\footnotesize
+\ifletterpaper
+Letter Paper Version
+\else
+A4 Paper Version
+\fi
+}
 
 \frontmatter
 \tableofcontents
@@ -383,14 +390,18 @@ while read object_list_line; do
     ### First write out the common parts -- title, subtitle, data table, and description.
     echo "
 \section*{\center \Huge ${Name_Display}}
-\label{$object_underscored}
 \vspace{-2pt}
 \begin{center}
 \Large ${Object_Type} in ${Constellation} \\\\
 \end{center}
+\ifletterpaper
+\vspace{-10pt}
+\else
 \vspace{2pt}
+\fi
 
 \begin{center}
+\label{$object_underscored}
 {\large Data}
 \\\\
 \vspace{5pt}
@@ -407,7 +418,11 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 
 \vspace{3pt}
 {\small ${object_description_with_prefix}} \\\\
+\ifletterpaper
+\vspace{-1pt}
+\else
 \vspace{2pt}
+\fi
 
 " >> $texfile
 
@@ -470,7 +485,11 @@ echo "
 	echo "
 \begin{figure*}[h!]
 \centering
+\ifletterpaper
+\includegraphics[width=0.9\textwidth,height=0.3\textheight,keepaspectratio]{${zoomed_in_skychart_PDF}}
+\else
 \includegraphics[width=0.9\textwidth,height=0.35\textheight,keepaspectratio]{${zoomed_in_skychart_PDF}}
+\fi
 \caption*{Zoomed-in chart}
 \end{figure*}" >> $texfile
 
@@ -484,7 +503,11 @@ echo "
     if [ -n "$LOGO_FILE" -a -f "$LOGO_FILE" ]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place logo from ${LOGO_FILE}"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{${LOGO_SIZE}}(1.05,1.8)
+\else
 \begin{textblock}{${LOGO_SIZE}}(0.8,2.0)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -502,7 +525,11 @@ echo "
     if [[ "${object_observability}" == *C* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place city icon from ${CITY_ICON} and telescope icon from ${TELESCOPE_ICON}"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{0.5}(6.9,1.95)
+\else
 \begin{textblock}{0.5}(6.65,2.15)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -512,7 +539,11 @@ echo "
 \end{minipage}
 \end{textblock}
 
+\ifletterpaper
+\begin{textblock}{0.2}(7.47,2.10)
+\else
 \begin{textblock}{0.2}(7.22,2.30)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -528,7 +559,11 @@ echo "
     if [[ "${object_observability}" == *B* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON}"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{0.5}(6.9,2.325)
+\else
 \begin{textblock}{0.5}(6.65,2.525)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -545,7 +580,11 @@ echo "
     if [[ "${object_observability}" == *CB* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place binocular icon from ${BINOCULAR_ICON} next to the city icon"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{0.20}(7.47,1.90)
+\else
 \begin{textblock}{0.20}(7.22,2.10)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -562,7 +601,11 @@ echo "
     if [[ "${object_observability}" == *N* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place eye icon from ${EYE_ICON}"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{0.5}(7.47,2.45)
+\else
 \begin{textblock}{0.5}(7.22,2.65)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -579,7 +622,11 @@ echo "
     if [[ "${object_observability}" == *CN* ]]; then
 	if [ $DEBUG ]; then echo "Writing TeX to place eye icon from ${EYE_ICON} next to the city icon"; fi;
 	echo "
+\ifletterpaper
+\begin{textblock}{0.20}(7.70,1.95)
+\else
 \begin{textblock}{0.20}(7.45,2.15)
+\fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
 \setlength{\parskip}{0.1cm}%
@@ -603,9 +650,18 @@ echo "
 
 	### Put the DSS image, filling 0.9\textwidth or 0.5\textheight, whichever is smaller
 	echo "
+\ifletterpaper
+ \vskip 15pt
+ \\
+\fi
+
 \begin{figure*}[h!]
 \centering
+\ifletterpaper
+\includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${DSS}}
+\else
 \includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${DSS}}
+\fi
 \caption*{DSS Image (${DSS_size_string})}
 \end{figure*}" >> $texfile
 
@@ -613,7 +669,11 @@ echo "
 	echo "
 \begin{figure*}[h!]
 \centering
+\ifletterpaper
+\includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${LOGFORM_FILE}}
+\else
 \includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${LOGFORM_FILE}}
+\fi
 \end{figure*}
 " >> $texfile
 
