@@ -4,19 +4,9 @@ M 3||B CT
 M 4|A low surface brightness, but well resolved globular cluster. Might be easier to locate with binoculars than with a telescope. Stars resolved even in small telescopes.|B CB CT
 M 5|A bright globular cluster.|B CT
 M 6|With a telescope, try to observe the butterfly pattern of stars that gives this cluster its name.|CB CT B N
+M 17|Messier 17 -- but imaginary naked eye visibility from the city for testing.|CT B N CN CB
 M 7|A remarkable cluster with few bright stars. Can be viewed with the naked eye from city skies at times.|CB CT B CN N
 M 110|The fainter companion of M 31. Binoculars may be able to discern this. M 110 appears more distant from M 31 in telescopes than in photographs because outer parts of M 31 are rather low surface brightness and are not seen easily. See also M 32.|B
 NGC 891|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;vL;vmE22___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 19;NGC 1023 group;Lord Rosse drawing shows dark lane___REPLACE_PIPE___
 NGC 3175|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___cB;L;mE 51;vglbM___REPLACE_PIPE___
 NGC 772|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;cL;R;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 112;Several tightly coiled arms br on NW side;UGC 1466___REPLACE_PIPE___
-NGC 5248|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;L;E150;psbMRN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 34;eBN in vB lens w many dk lanes___REPLACE_PIPE___
-NGC 5557|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___cB;S;R;vsbM*___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 99;BN;no struct___REPLACE_PIPE___
-NGC 5633|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___cB;pS;R;pglbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 185;neutral Sb___REPLACE_PIPE___
-NGC 5676|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;L;E45;pgbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 189;N 5660 at 30' IC 1029 at 26';Many B knotty filam___REPLACE_PIPE___
-NGC 5689|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___cB;pL;E87;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 188;diff Nucl in B bulge w strong dk lane on one side___REPLACE_PIPE___
-NGC 5707|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;pS;R___REPLACE_PIPE___ \\textbf{SAC: } \\verb___REPLACE_PIPE___comp 1.5' PA 26___REPLACE_PIPE___
-NGC 5820|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___B;E90;sbM;B D*f8';brightest of 3___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 756;Asym env;F streamer off SE end;D* Sh 191 8' E___REPLACE_PIPE___
-NGC 5899|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___cB;pL;pmE;smbMN___REPLACE_PIPE___ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 650;svBN;sev knotty branch arms;strong asym___REPLACE_PIPE___
-NGC 1679|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___vB;L;iR;4*1nv___REPLACE_PIPE___
-NGC 2403|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___!! cB;eL;vmE;vgmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 44;in M81 group;many well res irreg arms;broad bar___REPLACE_PIPE___
-NGC 2655|\\textbf{Dreyer: } \\verb___REPLACE_PIPE___vB;cL;lE 90;gsvmbM;diff___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 288;large nucleus w asym dk matter in lens;faint outer whirls___REPLACE_PIPE___
