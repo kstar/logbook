@@ -660,7 +660,7 @@ echo "
 \ifletterpaper
 \includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${DSS}}
 \else
-\includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${DSS}}
+\includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${DSS}}
 \fi
 \caption*{DSS Image (${DSS_size_string})}
 \end{figure*}" >> $texfile
@@ -672,7 +672,7 @@ echo "
 \ifletterpaper
 \includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${LOGFORM_FILE}}
 \else
-\includegraphics[width=0.9\textwidth,height=0.4\textheight,keepaspectratio]{${LOGFORM_FILE}}
+\includegraphics[width=0.9\textwidth,height=0.42\textheight,keepaspectratio]{${LOGFORM_FILE}}
 \fi
 \end{figure*}
 " >> $texfile
