@@ -698,14 +698,14 @@ echo "
     echo -e "\n\\\\clearpage" >> ${BUILD_DIR}/Objects.tex  ### Clear the page before starting every object's log form
     echo "\input{${BUILD_DIR}/${object_underscored}}" >> ${BUILD_DIR}/Objects.tex
 
-    #### Write an entry into ConstType.txt to generate indexes containing objects by constellation and type
-    if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
-    echo "${Constellation}|${Object_Type}|${object}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
-
     #### Write a LaTeX entry into the Checklist.tex file to include this object in the checklist
-    object_count=$(($object_count+1)) # Increment object count before writing into Checklist, so serial numbers begin with 1.
+    object_count=$(($object_count+1)) # Increment object count before writing into Checklist / ConstType, so serial numbers begin with 1.
     if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
     echo "${object_count} & ${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
+
+    #### Write an entry into ConstType.txt to generate indexes containing objects by constellation and type
+    if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
+    echo "${Constellation}|${Object_Type}|${object_underscored}|${object}|${object_count}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
     ## If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
     checklist_count=$(($checklist_count+1))
@@ -745,14 +745,14 @@ cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $2 }' | sort | uniq > ${BUIL
 while read Constellation; do
     if [ $DEBUG ]; then echo "Writing constellation-wise index for constellation ${Constellation}"; fi;
     echo "\subsection*{${Constellation}}" >> ${BUILD_DIR}/ObjectsByConstellation.tex
-    grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
+    grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " (\\pageref{" $3 "})" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
 done < ${BUILD_DIR}/Constellations.txt;
 
 ##### Generate object list by type
 while read Type; do
     if [ $DEBUG ]; then echo "Writing object-type-wise index for object type ${Type}"; fi;
     echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
-    grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
+    grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " (\\pageref{" $3 "})" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done < ${BUILD_DIR}/Types.txt;
 
 ##### Invoke PDFLaTeX twice to generate the PDFs
