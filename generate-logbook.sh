@@ -368,7 +368,7 @@ while read object_list_line; do
 	    echo "Warning: Using existing sky chart for object ${object} -- ${skychart_PDF}. If you changed FOVs, please delete the files.";
 	else
 	    if [ $DEBUG ]; then echo "Capturing skychart for ${object}. FOV = ${fov}"; fi;
-	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV $"{fov}"
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV "${fov}"
 	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${skychart}"
 	    inkscape -T -A ${skychart_PDF} ${skychart}
 	fi;
