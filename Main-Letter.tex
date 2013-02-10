@@ -1,0 +1,309 @@
+\documentclass[oneside]{book}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=blue]{hyperref}
+\usepackage{url}
+\usepackage{gensymb}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[labelformat=simple]{subcaption}
+\usepackage{float}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[strict]{changepage}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage[compact]{titlesec}
+
+%\setlength{\oddsidemargin}{-0.5in} 
+%\setlength{\evensidemargin}{0in}
+%\setlength{\marginparwidth}{0in}
+%\setlength{\marginparsep}{0in}
+%\pagestyle{empty}
+%\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
+
+%% \usepackage{etoolbox}
+%% \makeatletter
+%% \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%% \makeatother
+
+\renewcommand\chaptername{}
+\renewcommand{\thesubfigure}{\relax}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
+
+\fancyfoot[C]{This content is protected by Copyrights. See the~\nameref{Legal} chapter of this document for details.}
+\fancyfoot[RO, LE]{\thepage}
+\pagestyle{fancy}
+
+\newif\ifletterpaper
+
+\begin{document}
+
+\author{The Astronomy Logbook Project}
+
+\input{build/FrontMatter.tex}
+
+\chapter{Legal}
+\label{Legal}
+
+\input{Legal}
+
+\chapter{Acknowledgements}
+
+\input{Acknowledgements}
+
+\chapter{Credits}
+
+\input{Credits}
+
+\mainmatter
+
+\chapter{Glossary of Technical Terms}
+
+\input{Glossary}
+
+\chapter{Understanding and Using the Log Form}
+
+\input{LogFormDescription}
+
+
+\twocolumn
+\chapter{List of Objects by Constellation}
+
+\input{build/ObjectsByConstellation}
+
+\chapter{List of Objects by Type}
+
+\input{build/ObjectsByType}
+
+%% \subsection*{Andromeda}
+%% Andromeda Galaxy (M 31)\\
+%% M 32\\
+%% M 110\\
+
+%% \subsection*{Aquarius}
+%% M 2\\
+%% M 72\\
+%% M 73\\
+
+%% \subsection*{Aurgia}
+%% M 36\\
+%% M 37\\
+%% M 38\\
+
+
+%% \subsection*{Canes Venatici}
+%% M 3\\
+%% Whirlpool Galaxy (M 51)\\
+%% Sunflower Galaxy (M 63)\\
+%% M 94\\
+%% M 106\\
+
+%% \subsection*{Canis Major}
+%% Little Beehive Cluster (M 41)\\
+
+
+%% \subsection*{Cancer}
+%% Beehive Cluster; Praesepe (M 44)\\
+%% M 67\\
+
+%% \subsection*{Capricornus}
+%% M 30\\
+
+%% \subsection*{Cassiopeia}
+%% M 52\\
+%% M 103\\
+
+%% \subsection*{Cetus}
+%% Cetus A (M 77)\\
+
+%% \subsection*{Coma Berenices}
+%% M 53\\
+%% Black-Eye Galaxy (M 64)\\
+%% M 85\\
+%% M 88\\
+%% M 91\\
+%% M 98\\
+%% M 99\\
+%% M 100\\
+
+%% \subsection*{Corvus}
+%% Sombrero Galaxy (M 104)\\
+
+
+%% \subsection*{Cygnus}
+%% M 29\\
+%% M 39\\
+
+%% \subsection*{Draco}
+%% M 102\\
+
+%% \subsection*{Gemini}
+%% M 35\\
+
+%% \subsection*{Hercules}
+%% M 13\\
+%% M 92\\
+
+%% \subsection*{Hydra}
+%% M 48\\
+%% M 68\\
+%% Southern Pinwheel Galaxy (M 83)\\
+
+%% \subsection*{Leo}
+%% Leo Triplet - I (M 65)\\
+%% Leo Triplet - II (M 66)\\
+%% M 95\\
+%% M 96\\
+%% M 105\\
+
+%% \subsection*{Lepus}
+%% M 79\\
+
+%% \subsection*{Lyra}
+%% M 56\\
+%% Ring Nebula (M 57)\\
+
+%% \subsection*{Monoceros}
+%% M 50\\
+
+%% \subsection*{Ophiuchus}
+%% M 9\\
+%% M 10\\
+%% M 12\\
+%% M 14\\
+%% M 19\\
+%% M 62\\
+%% M 107\\
+
+%% \subsection*{Orion}
+%% Orion Nebula (M 42)\\
+%% M 43\\
+%% M 78\\
+
+%% \subsection*{Pegasus}
+%% M 15\\
+
+%% \subsection*{Perseus}
+%% M 34\\
+%% Little Dumbbell Nebula (M 76)\\
+
+%% \subsection*{Pisces}
+%% The Phantom (M 74)\\
+
+%% \subsection*{Puppis}
+%% M 46\\
+%% M 47\\
+%% M 93\\
+
+%% \subsection*{Sagitta}
+%% M 71\\
+
+%% \subsection*{Sagittarius}
+%% Lagoon Nebula (M 8)\\
+%% Swan Nebula; Omega Nebula (M 17)\\
+%% M 18\\
+%% Trified Nebula (M 20)\\
+%% M 21\\
+%% M 22\\
+%% M 23\\
+%% M 24\\
+%% M 25\\
+%% M 28\\
+%% M 54\\
+%% M 55\\
+%% M 69\\
+%% M 70\\
+%% M 75\\
+
+%% \subsection*{Scorpius}
+%% M 4\\
+%% Butterfly Cluster (M 6)\\
+%% Ptolemy's Cluster (M 7)\\
+%% M 80\\
+
+%% \subsection*{Scutum}
+%% Wild Duck Cluster (M 11)\\
+%% M 26\\
+
+%% \subsection*{Serpens}
+%% M 5\\
+%% Eagle Nebula (M 16)\\
+
+%% \subsection*{Taurus}
+%% Crab Nebula (M 1)\\
+%% Pleiades (M 45)\\
+
+%% \subsection*{Triangulum}
+%% Triangulum Galaxy (M 33)\\
+
+%% \subsection*{Ursa Major}
+%% M 40\\
+%% Bode's Galaxy (M 81)\\
+%% Cigar Galaxy; Ursa Major A (M 82)\\
+%% Owl Nebula (M 97)\\
+%% Pinwheel Galaxy (M 101)\\
+%% M 108\\
+%% M 109\\
+
+%% \subsection*{Virgo}
+%% M 49\\
+%% M 58\\
+%% M 59\\
+%% M 60\\
+%% M 61\\
+%% M 84\\
+%% M 86\\
+%% Virgo A (M 87)\\
+%% M 89\\
+%% M 90\\
+
+%% \subsection*{Vulpecula}
+%% Dumbbell Nebula (M 27)\\
+
+\onecolumn
+
+\chapter{Checklist of Objects}
+\setlength{\marginparwidth}{0.1in}
+\setlength{\marginparsep}{0in}
+\setlength{\leftmargin}{-0.5in}
+
+\input{build/Checklist}
+
+\chapter{Logging Forms}
+
+This section contains the actual logging forms.
+
+Note that the page numbers for each chart are listed in the Checklist
+section.
+
+%\setlength{\oddsidemargin}{0.2in} 
+%\setlength{\evensidemargin}{0.2in}
+\setlength{\marginparwidth}{0.2in}
+\setlength{\marginparsep}{0in}
+%\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
+\setlength{\topmargin}{0.0in}
+\addtolength{\voffset}{-0.3in}
+%\setlength{\bottommargin}{0.2in}
+\setlength{\leftmargin}{-0.5in}
+%\setlength{\rightmargin}{-0.3in}
+\addtolength{\textwidth}{0.7in}
+\setlength{\parindent}{0cm}
+\setlength{\hangindent}{0cm}
+
+\letterpapertrue
+
+\ifletterpaper
+\setlength{\headsep}{-13pt}
+\titlespacing{\section}{0pt}{-5pt}{0pt}
+\fi
+
+\input{build/Objects}
+
+\end{document}
