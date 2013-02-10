@@ -404,7 +404,7 @@ while read object_list_line; do
 \Large ${Object_Type} in ${Constellation} \\\\
 \end{center}
 \ifletterpaper
-\vspace{-10pt}
+\vspace{-17pt}
 \else
 \vspace{2pt}
 \fi
@@ -432,7 +432,7 @@ Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \vspace{3pt}
 {\small ${object_description_with_prefix}} \\\\
 \ifletterpaper
-\vspace{-1pt}
+\vspace{-8pt}
 \else
 \vspace{2pt}
 \fi

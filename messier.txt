@@ -29,8 +29,8 @@ M 28|Small globular cluster.|B CT
 M 29|A sparse cluster of just a few stars.|CT
 M 30||B CT
 M 31|Our remarkable galactic neighbour appears majestically to the naked eye from a dark site. In city conditions, it may be hard to see more than the central high-surface brightness core.|B CB CT N
-M 32|Has about the same surface-brightness as the core of M31. Appears detached from M 31 in most telescopes, because the faint parts of M31 are too faint to be seen. To avoid confusion with M 110, note that this M 32 is drastically easier to see, and if you see something nearly as bright as M 31's core, it is most definitely M 32 and not M 110.|CT
-M 33|A low surface brightness, but remarkable face-on spiral galaxy! While it is nearly impossible from city skies, binoculars will easily show it from a dark site. Visible to the naked eye under good sky conditions. Shows spiral structure even in $4'' \sim 6''$ telescopes. Look out for nebula NGC 604 in M33. |B N
+M 32|Has about the same surface-brightness as core of M31. Appears detached from M 31 in most telescopes, because outer parts of M31 are too faint to be seen. To avoid confusion with M 110, note M 32 is drastically easier to see, and if you see something nearly as bright as M 31's core, it is most definitely M 32, not M110.|CT
+M 33|A low surface brightness, but remarkable face-on spiral galaxy! While it is nearly impossible from city skies, binoculars will easily show it from a dark site. Visible to the naked eye under good sky conditions. Shows spiral structure even in $4'' \\sim 6''$ telescopes. Look out for nebula NGC 604 in M33. |B N
 M 34|A sparse cluster of few bright stars. Naked eye target from dark skies.|CT CB B N
 M 35|A bright cluster with many stars. Easy naked eye target from dark skies, sometimes even from city skies.|CT CB B N
 M 36||CT B
@@ -71,7 +71,7 @@ M 70|A tiny globular cluster. Be careful not to confuse this with a star.|CT
 M 71|One of the fainter globular clusters. But remarkably well resolved. Very nice from darker skies.|
 M 72||
 M 73|An asterism of about 4 stars that Messier mistook for a deep-sky object.|
-M 74|Arguably the toughest Messier object, this galaxy is a very low surface brightness face-on galaxy. Dark skies are a must. Easy to star hop from $\eta$ Piscium.|
+M 74|Arguably the toughest Messier object, this galaxy is a very low surface brightness face-on galaxy. Dark skies are a must. Easy to star hop from $\\eta$ Piscium.|
 M 75||
 M 76|A planetary nebula that is similar to the dumbbell nebula, albeit much smaller, and much fainter.|
 M 77|An active ``Seyfert'' galaxy with a very bright core. The visible portion is small, but high in surface brightness.|CT
@@ -107,4 +107,4 @@ M 106||
 M 107||
 M 108||
 M 109|Competing with M 74 for the faintest of the Messier catalog, especially from lower latitudes, this barred spiral galaxy needs dark skies. But from dark skies, you can discern the bar fairly easily with 8'' of aperture.|
-M 110|The fainter companion of M 31. Binoculars may be able to discern this. M 110 appears more distant from M 31 in telescopes than in photographs because outer parts of M 31 are rather low surface brightness and are not seen easily. See also M 32.|B
+M 110|Fainter companion of M 31. Binoculars may be able to discern. M 110 appears more distant from M 31 in telescopes than in photographs because outer parts of M 31 are low surface brightness and not seen easily. See also M 32.|B
