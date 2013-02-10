@@ -204,8 +204,8 @@ while read object_list_line; do
     min_axis=`echo $XML | xmlstarlet sel -t -m "object" -v "Minor_Axis"`
     RA_HMS=`echo $XML | xmlstarlet sel -t -m "object" -v "RA_HMS" | sed 's/\([hms]\)/^{\\\mathrm{\1}\\\,}/g'`
     RA_HMS_J2000=`echo $XML | xmlstarlet sel -t -m "object" -v "RA_J2000_HMS" | sed 's/\([hms]\)/^{\\\mathrm{\1}\\\\\,}/g'`
-    Dec_DMS=`echo $XML | xmlstarlet sel -t -m "object" -v "Dec_DMS" | sed "s/°/\\\\\degree\\\\\,/;s/'/'\\\\\,/;s/\"/''\\\\\,/"` # SED needed because LaTeX doesn't like the degree symbol
-    Dec_DMS_J2000=`echo $XML | xmlstarlet sel -t -m "object" -v "Dec_J2000_DMS" | sed "s/°/\\\\\degree\\\\\,/;s/'/'\\\\\,/;s/\"/''\\\\\,/"` # SED needed because LaTeX doesn't like the degree symbol
+    Dec_DMS=`echo $XML | xmlstarlet sel -t -m "object" -v "Dec_DMS" | sed "s/°/\\\\\circdegree\\\\\,/;s/'/'\\\\\,/;s/\"/''\\\\\,/"` # SED needed because LaTeX doesn't like the degree symbol
+    Dec_DMS_J2000=`echo $XML | xmlstarlet sel -t -m "object" -v "Dec_J2000_DMS" | sed "s/°/\\\\\circdegree\\\\\,/;s/'/'\\\\\,/;s/\"/''\\\\\,/"` # SED needed because LaTeX doesn't like the degree symbol
     mag=`echo $XML | xmlstarlet sel -t -m "object" -v "Magnitude"`
     Name=`echo $XML  | xmlstarlet sel -t -m "object" -v "Name"`
     Long_Name=`echo $XML  | xmlstarlet sel -t -m "object" -v "Long_Name"`
@@ -413,13 +413,17 @@ while read object_list_line; do
 \label{$object_underscored}
 {\large Data}
 \\\\
+\ifletterpaper
+\vspace{2pt}
+\else
 \vspace{5pt}
+\fi
 \begin{tabular}{| l | c || l | c |}
 \hline
 Right Ascension (current) & $ ${RA_HMS} $ & Declination (current) & $ ${Dec_DMS} $ \\\\
 Right Ascension (J2000.0) & $ ${RA_HMS_J2000} $ & Declination (J2000.0) & $ ${Dec_DMS_J2000} $ \\\\
 \hline
-Size & $ ${maj_axis}' \times ${min_axis}' $ & Position Angle & $ ${Position_Angle} \\degree $ \\\\
+Size & $ ${maj_axis}' \times ${min_axis}' $ & Position Angle & $ ${Position_Angle} \\circdegree $ \\\\
 Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \hline
 \end{tabular}
