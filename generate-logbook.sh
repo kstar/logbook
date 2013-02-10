@@ -70,7 +70,7 @@ unset DEBUG
 ## Star chart and DSS imagery settings
 SKYCHART_RATIO=0.6 ## Used _only_ with single page mode. Percentage of the space that is allocated to the Sky Chart.
 
-## Files and properties for various icons and overlays.
+## Default values for files and properties for various icons and overlays. To override, redefine in the config file
 LOGO_SIZE=0.7 # Logo size in inches.
 CITY_ICON="city.pdf"
 BINOCULAR_ICON="binoculars.pdf"
