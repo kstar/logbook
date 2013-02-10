@@ -163,13 +163,6 @@ Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second
 
 echo "\title{\Huge ${PROJECT_NAME}}
 \maketitle
-{\footnotesize
-\ifletterpaper
-Letter Paper Version
-\else
-A4 Paper Version
-\fi
-}
 
 \frontmatter
 \tableofcontents
