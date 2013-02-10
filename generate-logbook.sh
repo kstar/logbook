@@ -49,7 +49,9 @@
 # LOGO_FILE (unset) -- file containing an optional logo to render on each object's front page
 # BINOCULAR_ICON (binoculars.pdf) -- a file containing clipart of a binocular to render for binocular-observable objects
 # TELESCOPE_ICON (kstars.pdf) -- a file containing clipart of a telescope to render for telescope-observable objects
+# EYE_ICON (eye.pdf) -- a file containing clipart indicative of naked eye observability
 # LOGFORM_FILE (Logging-Form.pdf) -- a file containing the logging form
+# CITY_ICON (city.pdf) -- a file containing the city icon
 
 ##### Default values for various settable parameters.
 ## Unsettables
@@ -75,7 +77,9 @@ LOGO_SIZE=0.7 # Logo size in inches.
 CITY_ICON="city.pdf"
 BINOCULAR_ICON="binoculars.pdf"
 TELESCOPE_ICON="kstars.pdf"
+EYE_ICON="eye.pdf"
 LOGFORM_FILE="Logging-Form.pdf"
+MAIN_TEX_FILE="Main.tex"
 
 ##### Read command line arguments. Check if we have been supplied with a configuration file, exporting various variables.
 if [ -z "$1" ]; then
@@ -554,6 +558,42 @@ echo "
 " >> $texfile;
     fi;
 
+    ## If the object is observable with the naked eye, render a the naked eye icon on the top-right
+    if [[ "${object_observability}" == *N* ]]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place eye icon from ${EYE_ICON}"; fi;
+	echo "
+\begin{textblock}{0.5}(7.22,2.65)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure*}[h!]
+\includegraphics[width=\textwidth]{${EYE_ICON}}
+\end{figure*}
+\end{minipage}
+\end{textblock}
+
+" >> $texfile;
+    fi;
+
+    ## If the object is observable in the city with the naked eye, additionally render a small eye icon next to the city icon
+    if [[ "${object_observability}" == *CN* ]]; then
+	if [ $DEBUG ]; then echo "Writing TeX to place eye icon from ${EYE_ICON} next to the city icon"; fi;
+	echo "
+\begin{textblock}{0.20}(7.45,2.15)
+\begin{minipage}{\textwidth}
+\setlength{\parindent}{0pt}%
+\setlength{\parskip}{0.1cm}%
+\begin{figure*}[h!]
+\includegraphics[width=\textwidth]{${EYE_ICON}}
+\end{figure*}
+\end{minipage}
+\end{textblock}
+
+" >> $texfile;
+    fi;
+
+
+
     ## If we are writing 2 pages, we should resume writing the second page.
     if [ ! ${SINGLE_PAGE} ]; then
 	### If we are writing 2 pages per object, we have to still write the next page.
@@ -648,10 +688,8 @@ done < ${BUILD_DIR}/Types.txt;
 
 ##### Invoke PDFLaTeX twice to generate the PDFs
 if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"; fi;
-pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
-pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
-pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
-pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} Main.tex
-
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} ${MAIN_TEX_FILE}
+pdflatex -interaction nonstopmode -output-directory ${BUILD_DIR} ${MAIN_TEX_FILE}
+cp ${BUILD_DIR}/`echo ${MAIN_TEX_FILE} | sed 's/tex/pdf/'` Output.pdf
 if [ $DEBUG ]; then echo "Script finished!"; fi;
 
