@@ -28,7 +28,7 @@ M 27|Easy to see the dumbbell shape that gives the nebula its name. Large telesc
 M 28|Small globular cluster.|B CT
 M 29|A sparse cluster of just a few stars.|CT
 M 30||B CT
-M 31|Our remarkable galactic neighbour appears majestically to the naked eye from a dark site. In city conditions, it may be hard to see more than the central high-surface brightness core.|B CB CT N
+M 31|Our remarkable galactic neighbor appears majestically to the naked eye from a dark site. In city conditions, it may be hard to see more than the central high-surface brightness core.|B CB CT N
 M 32|Has about the same surface-brightness as core of M31. Appears detached from M 31 in most telescopes, because outer parts of M31 are too faint to be seen. To avoid confusion with M 110, note M 32 is drastically easier to see, and if you see something nearly as bright as M 31's core, it is most definitely M 32, not M110.|CT
 M 33|A low surface brightness, but remarkable face-on spiral galaxy! While it is nearly impossible from city skies, binoculars will easily show it from a dark site. Visible to the naked eye under good sky conditions. Shows spiral structure even in $4'' \\sim 6''$ telescopes. Look out for nebula NGC 604 in M33. |B N
 M 34|A sparse cluster of few bright stars. Naked eye target from dark skies.|CT CB B N
@@ -39,11 +39,11 @@ M 38||CT B
 M 39|A large, sparse open cluster of bright stars.|CT CB B
 M 40|This is a tight double star that Messier confused for a deep-sky object.|CT
 M 41|A remarkable open cluster of bright stars. Visible to the naked eye from dark skies, and sometimes even from city conditions.|CT CB B N CN
-M 42|The remarkable great Orion nebula! Visible to the naked eye as a fuzzy star in the sword of Orion from darkish skies. If viewing through a telescope, try separating the four stars in the ``hear'' of the nebula the constitute the ``Trapezium''|CT CB B N
+M 42|The remarkable great Orion nebula! Visible to the naked eye as a fuzzy star in the sword of Orion from darkish skies. If viewing through a telescope, try separating the four stars in the ``heart'' of the nebula the constitute the ``Trapezium''|CT CB B N
 M 43|A comma shaped, fainter nebulosity around a star, just ``above'' (imagining Orion standing erect) the Trapezium, separated from M 42 by a streak of darkness. Might need darkish skies.|
 M 44|A large, sparse open cluster of few bright stars. Easy naked eye object from darkish skies. Might be hard to locate in the city owing to the faintness of the stars of Cancer.|CT CB B N
 M 45|The famous `Seven sisters'. Easily seen with the naked eye even from the city.|CT CB B N CN
-M 46|Fainter and richer in stars than the neighbouring M 47. Foreground planetary nebula NGC 2438 lies in the view, seen in larger telescopes. Seen with the naked eye from dark skies.|CT B
+M 46|Fainter and richer in stars than the neighboring M 47. Foreground planetary nebula NGC 2438 lies in the view, seen in larger telescopes. Seen with the naked eye from dark skies.|CT B
 M 47|Brighter, but sparser than M 46. Easily seen with the naked eye. Seen with the naked eye from dark skies.|CT CB B N
 M 48||CT B
 M 49||
@@ -78,8 +78,8 @@ M 77|An active ``Seyfert'' galaxy with a very bright core. The visible portion i
 M 78|A reflection nebula.|
 M 79||CT B
 M 80|One of the smaller globular clusters.|CT
-M 81|A remarkable galaxy. To distinguish from its neighbour M 82, note that M 82 is rather thin and cigar shaped, whereas M 81 is more thicker.|B
-M 82|A remarkable galaxy. To distinguish from its neighbour M 81, note that M 82 is rather thin and cigar shaped, whereas M 81 is more thicker.|
+M 81|A remarkable galaxy. To distinguish from its neighbor M 82, note that M 82 is rather thin and cigar shaped, whereas M 81 is more thicker.|B
+M 82|A remarkable galaxy. To distinguish from its neighbor M 81, note that M 82 is rather thin and cigar shaped, whereas M 81 is more thicker.|
 M 83|A beautiful barred spiral galaxy, that will show a bar and hints of spiral structure even in smaller telescopes from dark skies. Best viewed from dark skies.|B
 M 84|Part of the Markarian Chain.|
 M 85||
