@@ -208,6 +208,57 @@ KStars -- \url{http://edu.kde.org/kstars} and SkyChart --
 \url{http://www.ap-i.net/skychart/start}, which also run on a variety
 of operating systems.
 
+\subsection{Visibility of Objects}
+To check if an object is visible at your latitude, you could find the
+lowest declination you can see by the formula
+\begin{equation}
+\mathrm{Lowest\,Observable\,Declination} = 90\circdegree -
+\mathrm{Observation\,Latitude}.
+\end{equation}
+Substitute your latitude without the sign, irrespective of whether it
+is northern or southern. In the southern hemisphere, you'll get the
+lowest northern declination visible. In the northern hemisphere,
+you'll get the lowest southern declination visible.
+
+If the object is in the opposite hemisphere to where you are
+observing, check that its declination is closer to zero than the
+Lowest Observable Declination you calculated above.
+
+Often, you cannot observe objects that are too close to the
+horizon. The atmosphere itself limits your observations somewhat to
+about 5\circdegree above the horizon (this is a very ballpark
+figure). Light-pollution domes can make things worse. Just subtract
+the number of degrees you lose near the horizon from the Lowest
+Observable Declination you calculated, to make your estimate more
+practical. High altitudes can sometimes help lower the horizon, so
+observing from a high altitude could add a few degrees to the Lowest
+Observable Declination.
+
+Objects that do not qualify the criterion you calculate above can
+never be seen from your latitude, unless you fly pretty high above the
+ground! So you can eliminate such objects from your observing list, or
+save them for a cross-continental trip to the other hemisphere (or a
+long trip to a more tropical region).
+
+Other objects, while visible from your latitude, may not be visible at
+the given time of the year etc. The best way to determine whether an
+object is visible at a given time from a given latitude is to use
+astronomy software. That is why knowing constellations is very helpful
+-- so you can quickly figure out if a certain object is visible by
+checking if the constellation in which it resides is
+visible. Wide-field star charts generated for a given night (you need
+one for the evening and one for the early morning next day) will be
+able to help you quickly check up on visible constellations, so you
+can plan your observation.
+
+If you like rough estimates, you can make one by knowing the RA of the
+sun. Block off 1 hour after sunset and before sunrise. 1 hour of time
+(almost exactly) corresponds to 1 hour of RA so if the object's RA
+lies outside this twilight zone, you are likely to be able to observe
+it. This kind of an estimate does not work well at high latitudes, at
+times away from the equinoxes. The use of computer software is
+strongly recommended.
+
 \subsection{Locating the Constellations, finding a reference star}
 First, make sure you are aware of the cardinal directions around
 you. 
