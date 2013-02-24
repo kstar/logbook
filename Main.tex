@@ -14,6 +14,12 @@
 \usepackage{array}
 \usepackage{wrapfig}
 \usepackage{fancyhdr}
+% \usepackage[compact]{titlesec}
+\usepackage{lscape} % Replace with pdflscape if usability on the computer is desired.
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage[table,usenames,dvipsnames]{xcolor}
+\usepackage{booktabs}
 
 %\setlength{\oddsidemargin}{-0.5in} 
 %\setlength{\evensidemargin}{0in}
@@ -43,6 +49,10 @@
 
 \newif\ifletterpaper
 
+\definecolor{tablealt}{rgb}{0.9,0.95,0.9}
+
+\hypersetup{linkcolor=Blue}
+
 \begin{document}
 
 \author{The Astronomy Logbook Project}
@@ -64,6 +74,10 @@
 
 \mainmatter
 
+%% \setlength{\hangindent}{0cm}
+%% \setlength{\parindent}{0cm}
+
+
 \chapter{Glossary of Technical Terms}
 
 \input{Glossary}
@@ -72,27 +86,34 @@
 
 \input{LogFormDescription}
 
-\setlength{\hangindent}{0cm}
-\setlength{\parindent}{0cm}
-
 \twocolumn
 \chapter{List of Objects by Constellation}
-NOTE: Numbers in parantheses are page numbers \\
+NOTE: Numbers in square brackets are page numbers \\
 
 \input{build/ObjectsByConstellation}
 
 \chapter{List of Objects by Type}
-NOTE: Numbers in parantheses are page numbers \\
+NOTE: Numbers in square brackets are page numbers \\
 
 \input{build/ObjectsByType}
 \onecolumn
 
+\chapter{List of Common Names}
+The following table is ordered alphabetically by common name. \\
+\input{build/TrivialNames}
+
+\begin{landscape}
 \chapter{Checklist of Objects}
-\setlength{\marginparwidth}{0.1in}
-\setlength{\marginparsep}{0in}
-\setlength{\leftmargin}{-0.5in}
+{\small Use this checklist to look up page numbers, to look up
+  essential information, and to make entries of the dates of your
+  first and subsequent observations.}
+
+%% \setlength{\marginparwidth}{0.1in}
+%% \setlength{\marginparsep}{0in}
+%% \setlength{\leftmargin}{-0.5in}
 
 \input{build/Checklist}
+\end{landscape}
 
 \chapter{Logging Forms}
 
@@ -112,9 +133,15 @@ section.
 \setlength{\leftmargin}{-0.5in}
 %\setlength{\rightmargin}{-0.3in}
 \addtolength{\textwidth}{0.7in}
+\setlength{\parindent}{0cm}
+\setlength{\hangindent}{0cm}
 
 \letterpaperfalse
 
+\ifletterpaper
+\setlength{\headsep}{-13pt}
+\titlespacing{\section}{0pt}{-5pt}{0pt}
+\fi
 \input{build/Objects}
 
 \end{document}
