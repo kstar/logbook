@@ -14,7 +14,7 @@
    id="svg3145"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="LogForm-AL.eps">
+   sodipodi:docname="LogForm-AL.svg">
   <defs
      id="defs3147">
     <inkscape:path-effect
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -153,19 +153,6 @@
                  y="643.65149"
                  x="535.72382"
                  sodipodi:role="line">FOV: ___________ </tspan></text>
-            <text
-               xml:space="preserve"
-               style="font-size:29.56883621px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:center;text-decoration:none;line-height:89.99999762%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:middle;baseline-shift:baseline;color:#000000;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-               x="-534.7597"
-               y="666.91046"
-               id="text4049-1"
-               sodipodi:linespacing="89.999998%"
-               transform="matrix(0,-0.92917339,1.0762254,0,0,0)"><tspan
-                 sodipodi:role="line"
-                 id="tspan4051-3"
-                 x="-534.7597"
-                 y="666.91046"
-                 style="font-size:12.93636703px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#4d4d4d;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L">Fields marked with an * are essential fields for Astronomy League certifications</tspan></text>
           </g>
         </g>
       </g>
