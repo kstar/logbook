@@ -1,3 +1,9 @@
+NGC 185|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;iR;vgmbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 707;Dwarf eliptical; Member Local Group ___REPLACE_PIPE___
+NGC 300|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;vmiE;vgpmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Large S-shaped;loose structured spiral ___REPLACE_PIPE___
+NGC 404|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 224;UGC 718;Beta AND sf 6' ___REPLACE_PIPE___
+NGC 488|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;R;svmbM;*8F10'___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___delicate spiral pattern ___REPLACE_PIPE___
+NGC 821|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vS;vlE;svmbM;* np___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 152;UGC 1631 ___REPLACE_PIPE___
+NGC 986|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;pmE;sbM;BI-N___REPLACE_PIPE___ 
 NGC 1087|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;lE;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 466;In NGC1068 grp;P w NGC1090 @15' and NGC1094 @ 20' ___REPLACE_PIPE___
 NGC 1232|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;R;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 258;Excellent face-on spiral ___REPLACE_PIPE___
 NGC 1313|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;E;vgbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nuclear bar ___REPLACE_PIPE___
@@ -7,13 +13,11 @@ NGC 1448|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;vmE222___REPLACE_PIPE___
 NGC 1527|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pS;E77;vsmbMRN___REPLACE_PIPE___ 
 NGC 1546|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;lE;gbMEN;**p___REPLACE_PIPE___ 
 NGC 1574|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;S;R;pgbM;2S* sf___REPLACE_PIPE___ 
-NGC 185|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;iR;vgmbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 707;Dwarf eliptical; Member Local Group ___REPLACE_PIPE___
 NGC 1947|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;R;glbM;*9 np___REPLACE_PIPE___ 
 NGC 2146|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;2'l;lE___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___extreme broad spiral arms;2 main smooth arms;1 w dark lane ___REPLACE_PIPE___
 NGC 2207|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;mE87;pslbMRN;biN;ring surrounding___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Double galaxy or interacting pair ___REPLACE_PIPE___
 NGC 2336|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;2*11 nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___weak bar;many weak filam arms w knots; P w IC 467 ___REPLACE_PIPE___
 NGC 2986|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pS;iR;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 311 ___REPLACE_PIPE___
-NGC 300|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;vmiE;vgpmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Large S-shaped;loose structured spiral ___REPLACE_PIPE___
 NGC 3136|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pS;R;gbM;*13n___REPLACE_PIPE___ 
 NGC 3184|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;R;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 168;svBN;smooth lens w spiral pattern of dark markings ___REPLACE_PIPE___
 NGC 3198|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;mE 45;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 199;svBN in bar partly obscured on one side ___REPLACE_PIPE___
@@ -25,7 +29,6 @@ NGC 3718|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;R;vglbM___REPLACE_PIPE_
 NGC 3726|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;lE 0;vsmbM *15;*11 n___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 730;well defined spiral pattern ___REPLACE_PIPE___
 NGC 3904|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;S;R;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 864 ___REPLACE_PIPE___
 NGC 4038|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;R;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 28;Ringtail Galaxy;two filaments ___REPLACE_PIPE___
-NGC 404|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;R;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 224;UGC 718;Beta AND sf 6' ___REPLACE_PIPE___
 NGC 4096|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;mE32;sBN or bar___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 207;nearly edge on ___REPLACE_PIPE___
 NGC 4125|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;cE;mbM___REPLACE_PIPE___ 
 NGC 4244|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;eE43;vgbM;vsBN or *?___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 41 ___REPLACE_PIPE___
@@ -43,7 +46,6 @@ NGC 4689|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vL;E;vglbM;r___REPLACE_PIP
 NGC 4696|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;R;gbM;r___REPLACE_PIPE___ 
 NGC 4709|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cS;R;gbM___REPLACE_PIPE___ 
 NGC 4762|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vmE31;3 B * s;f of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 75;NGC 4754 @ 10.5';thick streak w tufts at ends ___REPLACE_PIPE___
-NGC 488|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;R;svmbM;*8F10'___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___delicate spiral pattern ___REPLACE_PIPE___
 NGC 4936|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;S;R;bM;* f 6sec___REPLACE_PIPE___ 
 NGC 5371|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;R;bMFN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___vsB diff N;weak bar;sev knotty filam reg arms ___REPLACE_PIPE___
 NGC 5419|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;R;gpmbM___REPLACE_PIPE___ 
@@ -60,5 +62,3 @@ IC 5267|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;S;R;mbM___REPLACE_PIPE___ \
 NGC 7479|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cL;mE12;bet 2 st___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 55;excellent barred spiral ___REPLACE_PIPE___
 NGC 7507|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;cS;R;psvmbM;*10 np___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 2 ___REPLACE_PIPE___
 NGC 7582|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;pmE;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Group w NGC 7590 & 7599 ___REPLACE_PIPE___
-NGC 821|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;vS;vlE;svmbM;* np___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 152;UGC 1631 ___REPLACE_PIPE___
-NGC 986|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;L;pmE;sbM;BI-N___REPLACE_PIPE___ 

@@ -1,3 +1,15 @@
+NGC 55|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE;triN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Sculptor Galaxy Group ___REPLACE_PIPE___
+NGC 134|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE 47 degrees;psbM;f of 2;*10 np 45''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
+NGC 253|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!vvB;vvL;vmE 54 degrees;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 1;Sandage-arms are more defined by dust than * ___REPLACE_PIPE___
+NGC 278|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;2 st 10 nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 159;Lg B nucl;sev knotty massive arms;B part sharp edge;UGC 528 ___REPLACE_PIPE___
+NGC 292|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!!vvB;eeL;iR;st 12...18___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Memb Local Group;LMC 22 deg distant ___REPLACE_PIPE__NGC 524|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;mbM;4S* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 151 ___REPLACE_PIPE___
+NGC 578|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;pmE;gpmbM___REPLACE_PIPE___ 
+NGC 584|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;p of 2___REPLACE_PIPE___ 
+NGC 613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE118;sbM;* nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 281 ___REPLACE_PIPE___
+NGC 772|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;R;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 112;Several tightly coiled arms br on NW side;UGC 1466 ___REPLACE_PIPE___
+NGC 891|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vmE22___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 19;NGC 1023 group;Lord Rosse drawing shows dark lane ___REPLACE_PIPE___
+NGC 908|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 153 ___REPLACE_PIPE___
+NGC 936|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;R;mbMN;p of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 23;Thick central bar;P w NGC 941 12' foll ___REPLACE_PIPE___
 NGC 1023|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE;vvmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 156;brtst in grp;more neb 10' E;lens shp F tuft on E tip ___REPLACE_PIPE___
 NGC 1097|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE151;vbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 48 ___REPLACE_PIPE___
 NGC 1201|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;vlE;r;S* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 109 ___REPLACE_PIPE___
@@ -6,7 +18,6 @@ NGC 1300|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE;psvmbM___REPLACE_PI
 NGC 1316|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;vlE;vsvmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
 NGC 1332|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;E114;smbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 60 ___REPLACE_PIPE___
 NGC 1344|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;iR;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 257 ___REPLACE_PIPE___
-NGC 134|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE 47 degrees;psbM;f of 2;*10 np 45''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
 NGC 1350|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE;vmbMRN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
 NGC 1365|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!;vB;vL;mE;BN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Best example of barred spiral;Fornax Galaxy Cluster member ___REPLACE_PIPE___
 NGC 1379|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;gpmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Fornax Galaxy Cluster member ___REPLACE_PIPE___
@@ -33,7 +44,6 @@ NGC 1792|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;mE314;glbM;rr___REPLACE
 NGC 1808|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;E;psbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___F outer arms ___REPLACE_PIPE___
 NGC 2217|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;psmbM;r___REPLACE_PIPE___ 
 NGC 2403|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!! cB;eL;vmE;vgmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 44;in M81 group;many well res irreg arms;broad bar ___REPLACE_PIPE___
-NGC 253|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!vvB;vvL;vmE 54 degrees;gbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 1;Sandage-arms are more defined by dust than * ___REPLACE_PIPE___
 NGC 2613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vmE 110 deg___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 266;1.2 deg W from D* Burnham 208;Nearly edge-on ___REPLACE_PIPE___
 NGC 2655|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;lE 90;gsvmbM;diff___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 288;large nucleus w asym dk matter in lens;faint outer whirls ___REPLACE_PIPE___
 NGC 2681|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vg;vsmbM *10___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 242;Compact center and distinct spiral arms ___REPLACE_PIPE___
@@ -42,11 +52,9 @@ NGC 2768|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;lE;psbM;LBN___REPLACE_P
 NGC 2775|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;vgvsmbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 2;N in B smooth lens;many knotty arms form dk lane ___REPLACE_PIPE___
 NGC 2784|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;mE 64 deg;gmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 59 ___REPLACE_PIPE___
 NGC 2787|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;lE 90 deg;mbM;r;vS* sf inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 216;B nucl in B inner lens;strong narrow bar w blobs ___REPLACE_PIPE___
-NGC 278|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pL;R;2 st 10 nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 159;Lg B nucl;sev knotty massive arms;B part sharp edge;UGC 528 ___REPLACE_PIPE___
 NGC 2841|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;L;vmE151;vsmbM = *10___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 205;fine spiral w symmetrical whorls ___REPLACE_PIPE___
 NGC 2859|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;smbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 137;bright nucleus in diff. bar w diff. blobs ___REPLACE_PIPE___
 NGC 2903|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E;gmbM;r;sp of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 56;short B nucleus bar;fine multi arm spiral ___REPLACE_PIPE___
-NGC 292|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!!vvB;eeL;iR;st 12...18___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Memb Local Group;LMC 22 deg distant ___REPLACE_PIPE___
 NGC 2950|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;vgvmbMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 68 ___REPLACE_PIPE___
 NGC 2976|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;mE152;st inv___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 285;B main body;chaotic inner w many dk lane;F outer disc ___REPLACE_PIPE___
 NGC 2985|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;cL;R;psmbM;* inv f___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 78;diff BN;many poor res knotty arms; P w NGC 3027 at 25' ___REPLACE_PIPE___
@@ -144,21 +152,16 @@ NGC 5102|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pS;R;svmbM___REPLACE_PIPE_
 NGC 5128|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!!vB;vL;vmE122;bifid___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Dark central band;radio source ___REPLACE_PIPE___
 NGC 5195|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;lE;vgbM;inv M51___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 186;Interacting P w M 51;peculiar ___REPLACE_PIPE___
 NGC 5248|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;E150;psbMRN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 34;eBN in vB lens w many dk lanes ___REPLACE_PIPE___
-NGC 524|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;mbM;4S* nr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 151 ___REPLACE_PIPE___
 NGC 5253|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E45;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 638;SN in 1895 & 1975 ___REPLACE_PIPE___
 NGC 5322|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;iR;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 256;B diff. N;smooth neb ___REPLACE_PIPE___
 NGC 5363|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;*8 nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 6;P w NGC 5364 at 14.5' 2 B dif N in contact ___REPLACE_PIPE___
 NGC 5566|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;R;psbM;r;*f1.5'___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 144;double galaxy ___REPLACE_PIPE___
-NGC 55|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE;triN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Sculptor Galaxy Group ___REPLACE_PIPE___
 NGC 5701|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;pS;R;mbM;*11p15''___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 575;Several vF;vS comps in field ___REPLACE_PIPE___
 NGC 5746|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;vmE170;bM;BN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 126;vsBN in B cent.bulge;NGC 5740 at 18';edge on ___REPLACE_PIPE___
-NGC 578|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;pmE;gpmbM___REPLACE_PIPE___ 
 NGC 5813|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pS;R;psmbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 127;In NGC 5846 group;P w NGC 5814 at 5';NGC 8506 at 21' ___REPLACE_PIPE___
 NGC 5846|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;psbMN;F* inv S;n of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 128;Brightest in group;P w NGC 5846A at 1';NGC 5850 10'ESE ___REPLACE_PIPE___
-NGC 584|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;mbM;p of 2___REPLACE_PIPE___ 
 NGC 5907|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vmE155;vgBMN___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 759;vs bulge nearly hidden by strong dk lane; SN 1940a ___REPLACE_PIPE___
 NGC 5921|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;iR;vsbM*12;am *___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 148;eBN in B bar ___REPLACE_PIPE___
-NGC 613|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vmE118;sbM;* nf___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 281 ___REPLACE_PIPE___
 NGC 6684|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;vg;psvmbM___REPLACE_PIPE___ 
 NGC 6744|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;R;vg;svmbM;r___REPLACE_PIPE___ 
 NGC 6868|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;S;R;pgvmbM___REPLACE_PIPE___ 
@@ -170,8 +173,4 @@ NGC 7331|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;pmE163;smbM___REPLACE_PI
 NGC 7410|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;L;vmE43;mbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Nearly edge-on ___REPLACE_PIPE___
 NGC 7418|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;vlE;vglbM___REPLACE_PIPE___ 
 NGC 7552|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;S;mE90;vsbM *13___REPLACE_PIPE___ 
-NGC 772|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;cL;R;gbM;r___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 112;Several tightly coiled arms br on NW side;UGC 1466 ___REPLACE_PIPE___
 NGC 7814|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;cL;E;vgbM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H II 240;Equatorial dust lane;Nearly edge-on ___REPLACE_PIPE___
-NGC 891|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;vL;vmE22___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H V 19;NGC 1023 group;Lord Rosse drawing shows dark lane ___REPLACE_PIPE___
-NGC 908|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___cB;vL;E___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 153 ___REPLACE_PIPE___
-NGC 936|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;R;mbMN;p of 2___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H IV 23;Thick central bar;P w NGC 941 12' foll ___REPLACE_PIPE___

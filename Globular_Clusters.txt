@@ -1,4 +1,6 @@
 NGC 104|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!! vB;vL;eRi;vmCM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___X-ray source;* mags 11...;splendid cluster ___REPLACE_PIPE___
+NGC 288|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;lE;st 12...16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 20;loose structured globular ___REPLACE_PIPE___
+NGC 362|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vC;vmbM___REPLACE_PIPE___ 
 NGC 1261|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;R;rr___REPLACE_PIPE___ 
 NGC 1841|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;iR;vsbM;r___REPLACE_PIPE___ 
 NGC 1851|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___!vB;vL;R;vsvvbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___X-ray source;vRi w F* ___REPLACE_PIPE___
@@ -6,9 +8,7 @@ NGC 1855|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___Cl;vB;L;R;st 12___REPLACE_PIP
 NGC 2298|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;iR;gbM;rr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___Stars eF ___REPLACE_PIPE___
 NGC 2419|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pB;pL;lE 90deg;vgbM;*7-8 267deg;4' dist___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 218;Most distant globular;Brightest * 17 mag ___REPLACE_PIPE___
 NGC 2808|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___! vL;eRi;vgeCM 45 sec d;st 13...15___REPLACE_PIPE___ 
-NGC 288|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;L;lE;st 12...16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H VI 20;loose structured globular ___REPLACE_PIPE___
 NGC 3201|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vL;iR;lCM;st 13...16___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___* mags 13...; loose structured globular ___REPLACE_PIPE___
-NGC 362|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;vL;vC;vmbM___REPLACE_PIPE___ 
 NGC 4147|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___vB;pL;R;gbM;rrr___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 19;Stars F ___REPLACE_PIPE___
 NGC 4153|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___B;pL;E;bM___REPLACE_PIPE___ \\\\ \\textbf{SAC: } \\verb___REPLACE_PIPE___H I 11;equals NGC 4147; best possible ID ___REPLACE_PIPE___
 NGC 4372|\\textbf{Dreyer: }\\verb___REPLACE_PIPE___pF;L;R;* 12...16___REPLACE_PIPE___ 
