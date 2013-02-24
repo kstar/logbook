@@ -150,15 +150,26 @@ echo "" > ${BUILD_DIR}/Objects.tex
 echo "" > ${BUILD_DIR}/ConstType.txt
 echo "" > ${BUILD_DIR}/ObjectsByType.tex
 echo "" > ${BUILD_DIR}/ObjectsByConstellation.tex
+echo "" > ${BUILD_DIR}/TrivialNames.txt
 
-echo "\resizebox{\textwidth}{!}{
-\centering
+echo "%\resizebox{\textwidth}{!}{
+%\centering
 %\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
-\begin{tabular}{|r|c|c|c|c|c|c||c|c|}
-\hline
-Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
-\hline
-\hline
+{
+\rowcolors{3}{white}{tablealt}
+\begin{longtable}{r l l l l l l |c|c| }
+\caption{Checklist of Objects}\\\\
+%\hline
+Sl. No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+%\hline
+\toprule
+\endhead
+\midrule
+\multicolumn{9}{r}{\emph{Continued on the following page}}
+\endfoot
+\bottomrule
+\endlastfoot
+
 " > ${BUILD_DIR}/Checklist.tex
 
 echo "\title{\Huge ${PROJECT_NAME}}
@@ -167,8 +178,13 @@ echo "\title{\Huge ${PROJECT_NAME}}
 \frontmatter
 \tableofcontents
 
-\chapter*{Preface}
+%% Commands for icons
+\renewcommand{\cityicon}{${CITY_ICON}}
+\renewcommand{\binocularicon}{${BINOCULAR_ICON}}
+\renewcommand{\eyeicon}{${EYE_ICON}}
+\renewcommand{\telescopeicon}{${TELESCOPE_ICON}}
 
+\chapter*{Preface}
 \input{$PREFACE_FILE_WITHOUT_EXTENSION}" > ${BUILD_DIR}/FrontMatter.tex
 
 ##### Main loop -- loops over objects in the list
@@ -184,7 +200,7 @@ while read object_list_line; do
     if [ -n "$object_description" ]; then
 	object_description_with_prefix="\textbf{Description:} $object_description";
     else
-	object_description_with_prefix=""
+	object_description_with_prefix="\vskip 20pt"
     fi;
 
     if [ $DEBUG ]; then echo "Object: " $object; fi;
@@ -215,13 +231,16 @@ while read object_list_line; do
     Constellation=`echo $XML  | xmlstarlet sel -t -m "object" -v "Constellation"`
 
     if test "$Long_Name" != "$Name"; then
-	Name_Display="${Long_Name} (${Name})"
+        # Mirach's Ghost gets its own special hack to remove "(Galaxy not found :)" :D
+	Long_Name=`echo ${Long_Name} | sed 's/ (Galaxy not found :)//'`
+
+	# Add an entry into the Trivial Names list
+	echo "${Long_Name} & ${Name} & \\pageref{${object_underscored}} \\\\ %\\hline" >> ${BUILD_DIR}/TrivialNames.txt
+
+	Name_Display="${Name} (${Long_Name})"
     else
 	Name_Display="${Name}"
     fi;
-
-    # Mirach's Ghost gets its own special hack to remove "(Galaxy not found :)" :D
-    Name_Display=`echo ${Name_Display} | sed 's/ (Galaxy not found :)//'`
 
     if test -z "$Alt_Name"; then
 	Alt_Name="--" # Use a dash for blank alternate names
@@ -404,20 +423,24 @@ while read object_list_line; do
 \Large ${Object_Type} in ${Constellation} \\\\
 \end{center}
 \ifletterpaper
-\vspace{-17pt}
+\vspace{0.1pt}
 \else
 \vspace{2pt}
 \fi
 
 \begin{center}
 \label{$object_underscored}
-{\large Data}
-\\\\
 \ifletterpaper
 \vspace{2pt}
 \else
 \vspace{5pt}
 \fi
+
+\ifletterpaper
+\else
+\resizebox{4.5in}{!}{
+\fi
+
 \begin{tabular}{| l | c || l | c |}
 \hline
 Right Ascension (current) & $ ${RA_HMS} $ & Declination (current) & $ ${Dec_DMS} $ \\\\
@@ -427,6 +450,12 @@ Size & $ ${maj_axis}' \times ${min_axis}' $ & Position Angle & $ ${Position_Angl
 Magnitude & $ ${mag} $ & Other Designation & ${Alt_Name} \\\\
 \hline
 \end{tabular}
+
+\ifletterpaper
+\else
+}
+\fi
+
 \end{center}
 
 \vspace{3pt}
@@ -541,7 +570,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.5}(6.9,1.95)
 \else
-\begin{textblock}{0.5}(6.65,2.15)
+\begin{textblock}{0.5}(6.51,2.15)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -555,7 +584,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.2}(7.47,2.10)
 \else
-\begin{textblock}{0.2}(7.22,2.30)
+\begin{textblock}{0.2}(7.08,2.30)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -575,7 +604,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.5}(6.9,2.325)
 \else
-\begin{textblock}{0.5}(6.65,2.525)
+\begin{textblock}{0.5}(6.51,2.525)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -596,7 +625,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.20}(7.47,1.90)
 \else
-\begin{textblock}{0.20}(7.22,2.10)
+\begin{textblock}{0.20}(7.08,2.10)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -617,7 +646,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.5}(7.47,2.45)
 \else
-\begin{textblock}{0.5}(7.22,2.65)
+\begin{textblock}{0.5}(7.08,2.65)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -638,7 +667,7 @@ echo "
 \ifletterpaper
 \begin{textblock}{0.20}(7.70,1.95)
 \else
-\begin{textblock}{0.20}(7.45,2.15)
+\begin{textblock}{0.20}(7.30,2.15)
 \fi
 \begin{minipage}{\textwidth}
 \setlength{\parindent}{0pt}%
@@ -705,31 +734,31 @@ echo "
     #### Write a LaTeX entry into the Checklist.tex file to include this object in the checklist
     object_count=$(($object_count+1)) # Increment object count before writing into Checklist / ConstType, so serial numbers begin with 1.
     if [ $DEBUG ]; then echo "Writing entry into Checklist file"; fi;
-    echo "${object_count} & ${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\ \hline" >> ${BUILD_DIR}/Checklist.tex
+    echo "${object_count} & ${Name_Display} & ${Object_Type} & ${Constellation} & $ ${mag} $ & $ ${maj_axis}' \times ${min_axis}' $ & \pageref{$object_underscored} &  & \\\\" >> ${BUILD_DIR}/Checklist.tex
 
     #### Write an entry into ConstType.txt to generate indexes containing objects by constellation and type
     if [ $DEBUG ]; then echo "Writing entry into ConstType.txt file for generation of index by constellation and type"; fi;
     echo "${Constellation}|${Object_Type}|${object_underscored}|${object}|${object_count}|${Name_Display}" >> ${BUILD_DIR}/ConstType.txt
 
-    ## If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
-    checklist_count=$(($checklist_count+1))
-    if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${TOTAL_OBJECTS}"; fi;
-    if [ ${checklist_count} -ge 55 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
-	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
-	echo "\end{tabular}
-}
-\clearpage
-\resizebox{\textwidth}{!}{
-\centering
-%\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
-\begin{tabular}{|r||c|c|c|c|c|c||c|c|}
-\hline
-Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
-\hline
-\hline
-" >> ${BUILD_DIR}/Checklist.tex
-	checklist_count=0;
-    fi;
+#     ## If we are overflowing a page (~ 65 entries) of the checklist, close the table, clearpage, and start afresh on the next page.
+#     checklist_count=$(($checklist_count+1))
+#     if [ $DEBUG ]; then echo "Object count: ${object_count}; Checklist count: ${checklist_count}; Total objects: ${TOTAL_OBJECTS}"; fi;
+#     if [ ${checklist_count} -ge 1155 -a ${object_count} -lt ${TOTAL_OBJECTS} ]; then
+# 	if [ $DEBUG ]; then echo "Hit per-page limit for checklist before we're done. Creating a new page."; fi;
+# 	echo "\end{tabular}
+# }
+# \clearpage
+# \resizebox{\textwidth}{!}{
+# \centering
+# %\newcolumntype{C}{>{\centering\arraybackslash} m{0.1\textwidth}}
+# \begin{tabular}{|r||c|c|c|c|c|c||c|c|}
+# \hline
+# Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second Obs.\\\\
+# \hline
+# \hline
+# " >> ${BUILD_DIR}/Checklist.tex
+# 	checklist_count=0;
+#     fi;
 
     #### Write progress text to terminal
     echo "Object-wise Progress: " `echo "100*${object_count}/${TOTAL_OBJECTS}" | bc`"%";
@@ -737,7 +766,7 @@ Sl.No. & Object & Type & Constellation & Mag. & Size & Page & Obs. Date & Second
 done <$OBJECTLIST_FILE;
 
 ##### Close up the checklist file
-echo "\end{tabular}
+echo "\end{longtable}
 }" >> ${BUILD_DIR}/Checklist.tex
 
 ##### Generate sorted lists of constellations and types
@@ -749,15 +778,41 @@ cat ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $2 }' | sort | uniq > ${BUIL
 while read Constellation; do
     if [ $DEBUG ]; then echo "Writing constellation-wise index for constellation ${Constellation}"; fi;
     echo "\subsection*{${Constellation}}" >> ${BUILD_DIR}/ObjectsByConstellation.tex
-    grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " (\\pageref{" $3 "})" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
+    grep "^${Constellation}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " [\\pageref{" $3 "}]" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByConstellation.tex
 done < ${BUILD_DIR}/Constellations.txt;
 
 ##### Generate object list by type
 while read Type; do
     if [ $DEBUG ]; then echo "Writing object-type-wise index for object type ${Type}"; fi;
     echo "\subsection*{${Type}}" >> ${BUILD_DIR}/ObjectsByType.tex
-    grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " (\\pageref{" $3 "})" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
+    grep "^[^|]*|${Type}|" ${BUILD_DIR}/ConstType.txt | awk -F'|' '{ print $NF " [\\pageref{" $3 "}]" "\\\\" }' | sort >> ${BUILD_DIR}/ObjectsByType.tex
 done < ${BUILD_DIR}/Types.txt;
+
+##### Listing of Common Names
+echo "\begin{center}
+\rowcolors{3}{white}{tablealt}
+\begin{longtable}{l l r} 
+\caption{Objects by common name}\\\\
+%\hline
+Common Name & Catalog Designation & Page \\\\
+\toprule
+%\hline
+\endhead
+\midrule
+\multicolumn{3}{r}{\emph{Cont. on following page}}
+\endfoot
+\bottomrule
+\endlastfoot
+
+" > ${BUILD_DIR}/TrivialNames.tex
+
+cat ${BUILD_DIR}/TrivialNames.txt | sort >> ${BUILD_DIR}/TrivialNames.tex
+
+echo "
+\end{longtable}
+\end{center}
+" >> ${BUILD_DIR}/TrivialNames.tex
+
 
 ##### Invoke PDFLaTeX twice to generate the PDFs
 if [ $DEBUG ]; then echo "Done generating sources. Invoking pdflatex"; fi;
