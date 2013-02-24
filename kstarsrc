@@ -1,0 +1,122 @@
+Height 768=769
+State=AAAA/wAAAAD9AAAAAQAAAAEAAAFyAAACpfwCAAAAAfsAAAAkAFcAaABhAHQAJwBzACAASQBuAHQAZQByAGUAcwB0AGkAbgBnAQAAADIAAAKlAAAAAAAAAAAAAAVWAAACpQAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAGgBrAHMAdABhAHIAcwBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAWAHYAaQBlAHcAVABvAG8AbABCAGEAcgEAAAEy/////wAAAAAAAAAA
+Width 1366=1367
+
+[Catalogs]
+CatalogFile=/kde-devel/data/Hickson/HCG_KStars.cat
+ShowCatalog=1
+
+[Colors]
+AngularRuler=#000000
+BoxBGColor=#ffffff
+BoxGrabColor=#ff0000
+BoxTextColor=#000000
+CBoundColor=#aaaacc
+CBoundHighColor=#aaaacc
+CLineColor=#3a3aaa
+CNameColor=#285d28
+ColorSchemeFile=logbook-4.colors
+CompassColor=#000000
+CurrentPalette=Forty Colors
+DSNameColor=#75759c
+EclColor=#999900
+EqColor=#000000
+EquatorialGridColor=#445566
+GridColor=#445566
+HSTColor=#800000
+HorizontalGridColor=#55aa33
+HorzColor=#55aa33
+ICColor=#800000
+MWColor=#dddddd
+MessColor=#800000
+NGCColor=#800000
+ObsListColor=#990000
+PNameColor=#660000
+PlanetTrailColor=#bb9900
+SNameColor=#914421
+SatColor=#ff0000
+SatLabelColor=#640000
+SkyColor=#ffffff
+StarColorIntensity=0
+StarColorMode=2
+StarHopRouteColor=#808080
+SupernovaColor=#ffa500
+TargetColor=#006600
+UserLabelColor=#000000
+VisibleSatColor=#00ff00
+
+[DownloadDialog Settings]
+Height 768=400
+Width 1366=700
+
+[GUI]
+PositionFocusBox=1136,0
+PositionGeoBox=1189,657
+RunStartupWizard=false
+ShadeTimeBox=false
+ShowInfoBoxes=false
+StickyGeoBox=3
+WindowHeight=748
+WindowWidth=1366
+
+[General]
+DSSPadding=5
+
+[KFileDialog Settings]
+Height 768=314
+Recent Files[$e]=$HOME/test-kstars.svg,/tmp/foo.svg,/tmp/fubar.svg,/tmp/test.svg,/tmp/barbaz.svg,/tmp/bar.svg,/kde-devel/HCG-KStars.cat,/kde-devel/data/Hickson/HCG_KStars.cat,/tmp/test3.svg,$HOME/Coorg-Day-1.obslist,$HOME/foobar.svg,$HOME/test-kstars.png,/kde-devel/data/Generic/Misc.cat,$HOME/Astronomy/BAS/Star Charts/Morning.pdf,$HOME/Astronomy/BAS/Star Charts/Evening.pdf
+Width 1366=683
+
+[Location]
+CityName=Bangalore
+CountryName=India
+Latitude=12.9666666666667
+Longitude=77.5666666666667
+TimeZone=5.5
+
+[MainWindow]
+Height 1024=748
+Height 768=769
+State=AAAA/wAAAAD9AAAAAQAAAAEAAAFyAAACpfwCAAAAAfsAAAAkAFcAaABhAHQAJwBzACAASQBuAHQAZQByAGUAcwB0AGkAbgBnAQAAADIAAAKlAAAAAAAAAAAAAAVWAAACpQAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAGgBrAHMAdABhAHIAcwBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAWAHYAaQBlAHcAVABvAG8AbABCAGEAcgEAAAEy/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1024=1025
+Width 1280=1281
+Width 1366=1367
+
+[Notification Messages]
+dag_opengl_infoboxes=false
+dag_opengl_switch=true
+
+[View]
+AutoSelectGrid=false
+BoxBGMode=0
+DeepSkyLabelDensity=11
+FOVNames=1 degree
+FocusDec=30.1769504858315
+FocusRA=6.86003872467126
+MagLimitDrawDeepSkyZoomOut=16
+Projection=0
+RunClock=false
+ShowCBounds=true
+ShowCLines=true
+ShowCNames=true
+ShowDeepSkyNames=true
+ShowEquator=true
+ShowEquatorialGrid=true
+ShowGround=false
+ShowHorizon=false
+ShowIC=true
+ShowMessierImages=false
+ShowSolarSystem=false
+StarDensity=19
+StarLabelDensity=12
+UseAltAz=false
+UseAnimatedSlewing=false
+ZoomFactor=1016.04515669866
+
+[Xplanet]
+XplanetBackgroundColorValue=#000000
+XplanetColor=#ff0000
+
+[indi]
+fitsDir=/home/akarsh
