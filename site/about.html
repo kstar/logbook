@@ -1,0 +1,254 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Downloads &middot; The Astronomy Logbook Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scripts to generate observing
+				      logbooks for amateur
+				      astronomers, and to distribute compiled logbooks">
+    <meta name="author" content="Akarsh Simha">
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">About</a></li> 
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h3 class="muted">The Astronomy Logbook Project</h3>
+      </div>
+
+      <hr />
+      <div class="row-fluid" align='center'>
+	The following (and a couple other) <strong>free and open
+	source software</strong> were used to make these books!
+      </div>
+      <br />
+      <div class='row-fluid'>
+	<div class='span3'>
+	  <center>
+	  <a href="http://edu.kde.org/kstars"><img src="images/kstars.png"
+	  alt="KStars"></a>
+	  KStars
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	    <br />
+	    <br />
+	    <a href="http://www.latex-project.org/"><img src="images/LaTeX.png"
+							 alt="LaTeX"></a>
+	    LaTeX
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	  <a href="http://inkscape.org/"><img src="images/inkscape.png"
+	  alt="Inkscape"></a>
+	  Inkscape
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	  <a href="https://www.gnu.org/"><img src="images/GNU.svg"
+	  alt="GNU"></a>
+	  GNU
+	  </center>
+	</div>
+      </div>
+      <div class="row-fluid">
+	<div class='span3'>
+	  <center>
+	  <a href="http://www.imagemagick.org"><img src="images/ImageMagick.png"
+	  alt="ImageMagick"></a>
+	  ImageMagick
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	    <br /> <br />
+	  <a href="http://xmlstar.sourceforge.net/"><!--<img src="images/xmlstarlet.png" --
+				--alt="xmlstarlet"> -->
+	    <h3>xmlstarlet</h3>
+	  </a>
+	  <!--	  xmlstarlet -->
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	    <br /> <br />
+	  <a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/"><!-- <img src="images/PDFtk.png"
+	  alt="PDFtk Server">-->
+	    <h3>PDFtk Server</h3>
+	  </a>
+	  </center>
+	</div>
+	<div class='span3'>
+	  <center>
+	    <a href="http://www.gimp.org/"><img src="images/GIMP.png"
+						alt="The GNU Image
+						Manipulation
+						Program"></a><br />
+	    The GIMP
+	  </center>
+	</div>
+	<!-- <div class='span3'> -->
+	<!--   <center> -->
+	<!--     <br /><br /> -->
+	<!--   <a href="http://www.freedesktop.org/wiki/Software/dbus"><\!-- <img src="images/DBus.png" -->
+	<!--   alt="D-Bus"> -\-> -->
+	<!--   <h3>D-Bus</h3> -->
+	<!--   </a> -->
+	<!--   <\!-- D-Bus -\-> -->
+	<!--   </center> -->
+	<!-- </div> -->
+      </div>
+      <hr />
+
+
+      <h2>Introduction</h2>
+      <p>
+	The Astronomy Logbook project was motivated by
+	the <a href="http://bas.org.in/Home">Bangalore Astronomical
+	Society</a>'s observation certificate programme.
+      </p>
+      <p>
+	The project aims to create free (both as in freedom and
+	cost-free) and open source tools to make astronomy logbooks
+	that become all-in-one resources for amateur astronomers
+	interested in visual observation.
+      </p>
+      <p>
+	All of the code for this project (TeX + BASH) as it stands
+	today was written
+	by <a href="http://www.ph.utexas.edu/~asimha/">Akarsh
+	Simha</a>, with a lot of inspiration, motivation, and valuable
+	suggestions from a number of people, who are listed in the
+	Credits section.
+      </p>
+
+      <h2>How does it work?</h2>
+      <p>
+	The logbooks are typeset
+	using <a href="http://www.latex-project.org/">LaTeX</a>. The
+	logbooks have both static content (eg: Copyright information,
+	usage guidelines, etc.) and dynamic content (eg: the actual
+	logging forms, the checklist tables, etc.). The static content
+	is just a bunch of static TeX
+	files. A <a href="https://www.gnu.org/software/bash/">BASH
+	shell script</a> generates TeX commands to typeset the dynamic
+	content.
+      </p>
+      <p>
+	The star charts are rendered
+	by <a href="http://edu.kde.org/kstars">KStars</a>, which is
+	controlled by the shell script via
+	the <a href="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a>
+	interprocess communication system. Basic deep-sky data is also
+	accessed from KStars via D-Bus.
+      </p>
+      <p>
+	Various other open source tools are used in the process:
+	Inkscape is used to convert from SVG to PDF format, xmlstarlet
+	is used to parse XML output from KStars, ImageMagick is used
+	to convert between and resize raster image formats.
+      </p>
+
+      <h2>Sweet! Where's the source code?</h2>
+      <p>
+	Sorry — I'm yet to upload them, but I intend to upload
+	them. It's just that they are pending some cleaning. If you
+	are particularly interested, send me an email, and I'll find
+	more motivation to clean it up and put it up. I intend to
+	license the code under GPL.
+
+	<!-- If you make any improvements,
+	please <a href="contact.html">let me know</a>. If you generate
+	any other logbooks, I'll be glad to share them on this website
+	as long as they are redistributable. -->
+
+      </p>
+
+      <h2>Legal</h2>
+      <p>
+	The logbook draws on various content that has different
+	licensing policy. Please see the "Legal" chapter of the
+	logbooks for licensing information.
+      </p>
+      <hr />
+      <div class="footer">
+        <p>&copy; The Astronomy Logbook
+          Project. <img align="right"
+          src="http://mirrors.creativecommons.org/presskit/logos/cc.logo.svg"
+          width=100></p>
+	<p>We support Creative Commons and free(dom) culture! Note however,
+	that not all the logbooks could be licensed under creative
+	commons, and not all content on this site is under Creative Commons</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
