@@ -1,0 +1,47 @@
+A very rough set of instructions on how to use this project.
+
+1. Install the dependencies:
+
+* KStars (only the current git master works as of this writing, and
+  still segfaults often enough)
+* ImageMagick
+* xmlstarlet
+* pdflatex
+* inkscape
+* pdftk
+* qdbus
+* wget
+
+Some additional TeX packages may be necessary. Please update this
+document if missing dependencies are found.
+
+2. Create an object list file and a config file. See the comments in
+   generate-logbook.sh and the existing .cfg and .txt files for help.
+   
+   TODO: Explain the object list file.
+
+3. Backup and replace your KStars configuration file (kstarsrc in
+   $HOME/.kde/share/config) and the NGC/IC data file (ngcic.dat in
+   $HOME/.kde/share/apps/kstars) with the supplied files. Also copy
+   logbook-colors.colors color scheme, which has been tested for
+   grayscale and color printing, and viewing under red light.
+
+4. Run KStars, make sure exporting SVG images works without
+   segfaulting. Make sure KStars is accessible over DBus.
+
+5. Resize the KStars window to a good size. Some favourite sizes are
+   mentioned in Working-Window-Sizes.txt
+
+6. Run the script. See the comments in the script file for invokation
+   details.
+
+7. Go do something else while the script finishes, careful not to
+   close the KStars window.
+
+8. Tend to errors, if any.
+
+9. The final PDF output should be Output.pdf in the project
+   directory. The build/ subdirectory contains build stuff. Make sure
+   you don't push it back onto the repositories. There must be a
+   gitignore that prevents this already.
+
