@@ -1,15 +1,30 @@
 #!/bin/bash
 
-#
-# This script is Copyright (c) 2013 Akarsh Simha <akarsh.simha@kdemail.net> 
-#
-# This script is licensed under the GNU General Public License v2 or
-# any later version at your convenience.
-#
-# Please see the LICENSE file for a copy of the GNU General Public
-# License
-#
+#####################
+###### LICENSE ######
+#####################
 
+# generate-logbook.sh   --   Generate a logbook for a given list of celestial objects
+#
+# Copyright (C) 2013 Akarsh Simha <akarsh@kde.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+#############################################
+###### Description and some basic help ######
+#############################################
 #
 # Generate a logbook for a given list of celestial objects.
 #
@@ -21,8 +36,16 @@
 #
 # Dependencies: xmlstarlet, inkscape, pdflatex, kstars, ImageMagick (convert), pdftk
 #
+# Invokation:
+#     ./generate-logbook.sh <configuration shell script> ["build" directory]
+#     Note that the build directory *MUST BE* relative to the current directory. The default value is 'build'
 
-##### Variables in the configuration file supplied. Default values in parantheses.
+##### Variables in the configuration file supplied. Default values in parantheses. #####
+########################################################################################
+
+# You may set these variables in the configuration file (essentially a
+# shell script) supplied on the command line to set various parameters
+# of the logbook generation.
 
 ### Mandatory
 # PROJECT_NAME -- The title of the book (eg: The Messier Observer's Handbook)
@@ -52,6 +75,10 @@
 # EYE_ICON (eye.pdf) -- a file containing clipart indicative of naked eye observability
 # LOGFORM_FILE (Logging-Form.pdf) -- a file containing the logging form
 # CITY_ICON (city.pdf) -- a file containing the city icon
+
+##################################
+############# SCRIPT #############
+##################################
 
 ##### Default values for various settable parameters.
 ## Unsettables
