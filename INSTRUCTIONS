@@ -30,7 +30,11 @@ document if missing dependencies are found.
    segfaulting. Make sure KStars is accessible over DBus.
 
 5. Resize the KStars window to a good size. Some favourite sizes are
-   mentioned in Working-Window-Sizes.txt
+   mentioned in Working-Window-Sizes.txt.
+
+   Also disable the display of the Status bar as this tends to
+   elongate the size of the window when the text becomes large. This
+   can be done under the Options menu.
 
 6. Run the script. See the comments in the script file for invokation
    details.
