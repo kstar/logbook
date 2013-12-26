@@ -64,6 +64,7 @@
 # FOV_ZOOMED_IN (unset) -- used only in two-page mode. Sets the zoomed-in FOV. If unset, a dynamic FOV of 10 * (object's major axis is used)
 # FOV_ZOOMED_OUT (40) -- used only in two-page mode. Sets the zoomed-out FOV. If unset, a default of 40 degrees is used
 # FOV_INTERMEDIATE (unset) -- used only in two-page mode. Sets the intermediate FOV. If unset, the logarithmic average of the zoomed-in and zoomed-out FOVs is used.
+# ZOOMED_IN_FOV_NO_SMALLER_THAN_DSS (unset) -- used only in two-page mode. If set, the zoomed-in FOV is always larger than the larger DSS image dimension.
 # APPROX_FOV (20) -- used only in single-page mode. Sets the FOV of the skychart
 # SKYCHART_RATIO (0.6) -- used only in single-page mode. Sets the ratio of space used by the sky chart to the total space used by the DSS image and the sky chart.
 
@@ -92,6 +93,7 @@ unset FOV_ZOOMED_IN
 unset FOV_INTERMEDIATE
 unset FOV_ZOOMED_OUT
 unset APPROX_FOV
+unset ZOOMED_IN_FOV_NO_SMALLER_THAN_DSS
 
 ## Debug mode (verbosity)
 unset DEBUG
@@ -279,7 +281,10 @@ while read object_list_line; do
 
     #### Get DSS image
     DSS_URL=`qdbus org.kde.kstars /KStars org.kde.kstars.getDSSURL "$object"`
-    DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
+    DSS_width=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/\2/"`
+    DSS_height=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/\1/"`
+    # DSS_size_string=`echo $DSS_URL | sed "s/^.*&h=\([0-9\.]*\)&w=\([0-9\.]*\)&.*$/$\2' \\\\\times \1'$/"`
+    DSS_size_string="$ ${DSS_width}' \\times ${DSS_height}' $"
     DSS=${BUILD_DIR}/${object_underscored}_dss.png
     DSS_band="B"
     if [ ! -f "${DSS}" -o "${NO_REUSE_EXISTING_DSS}" ]; then
@@ -353,8 +358,20 @@ while read object_list_line; do
 	    fov_zoomed_in=${FOV_ZOOMED_IN}
 	else
 	    fov_zoomed_in=`echo $maj_axis/6.0 | bc -l` # 10 x the major axis, in degrees
-	    if [ -z $fov_zoomed_in -o $(echo "$fov_zoomed_in <= 0.25" | bc -l) -eq 1 ]; then
-		fov_zoomed_in=0.25
+	    if [ -z $fov_zoomed_in -o $(echo "$fov_zoomed_in <= 0.35" | bc -l) -eq 1 ]; then
+		fov_zoomed_in=0.35
+	    fi;
+	fi;
+
+	if [ -n "${ZOOMED_IN_FOV_NO_SMALLER_THAN_DSS}" ]; then
+	    DSS_max_dimension=${DSS_width}
+	    if [ `echo "${DSS_height} > ${DSS_max_dimension}" | bc` -eq 1 ]; then
+		DSS_max_dimension=${DSS_height};
+	    fi;
+
+	    if [ `echo "${fov_zoomed_in}*60.0 < ${DSS_max_dimension}" | bc` -eq 1 ]; then
+		if [ $DEBUG ]; then echo "Zoomed-in FOV ${fov_zoomed_in} is smaller than DSS dimensions ${DSS_width} × ${DSS_height}. Resetting zoomed-in FOV to ${DSS_max_dimension}."; fi;
+		fov_zoomed_in=`echo "${DSS_max_dimension} / 60.0" | bc`;
 	    fi;
 	fi;
 	
@@ -377,6 +394,7 @@ while read object_list_line; do
 	else
 	    if [ $DEBUG ]; then echo "Capturing zoomed in skychart for ${object}. FOV = ${fov_zoomed_in}"; fi;
 	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_in}
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_in}
 	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${zoomed_in_skychart}"
 	    inkscape -T -A ${zoomed_in_skychart_PDF} ${zoomed_in_skychart}
 	fi;
@@ -387,6 +405,7 @@ while read object_list_line; do
 	else
 	    if [ $DEBUG ]; then echo "Capturing intermediate skychart for ${object}. FOV = ${fov_intermediate}"; fi;
 	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_intermediate}
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_intermediate}
 	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${intermediate_skychart}"
 	    inkscape -T -A ${intermediate_skychart_PDF} ${intermediate_skychart}
 	fi;
@@ -396,6 +415,7 @@ while read object_list_line; do
 	    echo "Warning: Using existing zoomed out sky chart for object ${object} -- ${zoomed_out_skychart_PDF}. If you changed FOVs, please delete the files.";
 	else
 	    if [ $DEBUG ]; then echo "Capturing zoomed out skychart for ${object}. FOV = ${fov_zoomed_out}"; fi;
+	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_out}
 	    qdbus org.kde.kstars /KStars org.kde.kstars.setApproxFOV ${fov_zoomed_out}
 	    qdbus org.kde.kstars /KStars org.kde.kstars.exportImage "${zoomed_out_skychart}"
 	    inkscape -T -A ${zoomed_out_skychart_PDF} ${zoomed_out_skychart}
