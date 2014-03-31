@@ -94,6 +94,7 @@ unset FOV_INTERMEDIATE
 unset FOV_ZOOMED_OUT
 unset APPROX_FOV
 unset ZOOMED_IN_FOV_NO_SMALLER_THAN_DSS
+unset NO_PREFACE
 
 ## Debug mode (verbosity)
 unset DEBUG
@@ -150,9 +151,13 @@ if [ ! -f "$OBJECTLIST_FILE" ]; then
     exit 1;
 fi;
 
-if [ ! -f "$PREFACE_FILE" ]; then
-    echo "ERROR: LaTeX Preface file \"$2\" is not a valid file. Please set a valid file."
-    exit 1;
+if [ ! "${NO_PREFACE}" ]; then
+    if [ ! -f "$PREFACE_FILE" ]; then
+	echo "ERROR: LaTeX Preface file \"$2\" is not a valid file. Please set a valid file."
+	exit 1;
+    fi;
+else
+    if [ $DEBUG ]; then echo "No preface."; fi;
 fi;
 
 if [ $DEBUG ]; then echo "Object list file: ${OBJECTLIST_FILE}. Preface file: ${PREFACE_FILE}. Project Name: ${PROJECT_NAME}"; fi;
@@ -211,10 +216,13 @@ echo "\title{\Huge ${PROJECT_NAME}}
 \renewcommand{\cityicon}{${CITY_ICON}}
 \renewcommand{\binocularicon}{${BINOCULAR_ICON}}
 \renewcommand{\eyeicon}{${EYE_ICON}}
-\renewcommand{\telescopeicon}{${TELESCOPE_ICON}}
+\renewcommand{\telescopeicon}{${TELESCOPE_ICON}} " > ${BUILD_DIR}/FrontMatter.tex
 
+if [ ! "${NO_PREFACE}" ]; then
+    echo "
 \chapter*{Preface}
-\input{$PREFACE_FILE_WITHOUT_EXTENSION}" > ${BUILD_DIR}/FrontMatter.tex
+\input{$PREFACE_FILE_WITHOUT_EXTENSION}" >> ${BUILD_DIR}/FrontMatter.tex
+fi;
 
 ##### Main loop -- loops over objects in the list
 while read object_list_line; do
