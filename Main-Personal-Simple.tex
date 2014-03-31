@@ -1,0 +1,154 @@
+\documentclass[oneside]{book}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=blue]{hyperref}
+\usepackage{url}
+\usepackage{gensymb}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[labelformat=simple]{subcaption}
+\usepackage{float}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[strict]{changepage}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage[compact]{titlesec}
+\usepackage{lscape} % Replace with pdflscape if usability on the computer is desired.
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage[table,usenames,dvipsnames]{xcolor}
+\usepackage{booktabs}
+
+%\setlength{\oddsidemargin}{-0.5in} 
+%\setlength{\evensidemargin}{0in}
+%\setlength{\marginparwidth}{0in}
+%\setlength{\marginparsep}{0in}
+%\pagestyle{empty}
+%\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
+
+%% \usepackage{etoolbox}
+%% \makeatletter
+%% \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%% \makeatother
+
+\newcommand{\circdegree}{\ensuremath{^\circ}}
+\renewcommand\chaptername{}
+\renewcommand{\thesubfigure}{\relax}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
+
+\fancyfoot[C]{This material is for the generator's personal use only. Please do not copy or distribute.}
+\fancyfoot[RO, LE]{\thepage}
+\pagestyle{fancy}
+
+\newif\ifletterpaper
+
+\definecolor{tablealt}{rgb}{0.9,0.95,0.9}
+
+\hypersetup{linkcolor=Blue}
+
+\begin{document}
+
+\author{The Astronomy Logbook Project}
+
+\input{build/FrontMatter.tex}
+
+%% \chapter{Legal}
+%% \label{Legal}
+
+%% This logbook is strictly for personal use only. It has not been
+%% possible to permit the distribution of copies of the finished
+%% logbook. If you desire a copy of this logbook, please generate it
+%% yourself using the scripts provided and KStars, for your personal use.
+
+%% \input{Legal}
+
+%% \chapter{Acknowledgements}
+
+%% \input{Acknowledgements}
+
+%% \chapter{Credits}
+
+%% \input{Credits}
+
+\mainmatter
+
+%% \setlength{\hangindent}{0cm}
+%% \setlength{\parindent}{0cm}
+
+
+%% \chapter{Glossary of Technical Terms}
+
+%% \input{Glossary}
+
+%% \chapter{Understanding and Using the Log Form}
+
+%% \input{LogFormDescription}
+
+\twocolumn
+\chapter{List of Objects by Constellation}
+NOTE: Numbers in square brackets are page numbers \\
+
+\input{build/ObjectsByConstellation}
+
+\chapter{List of Objects by Type}
+NOTE: Numbers in square brackets are page numbers \\
+
+\input{build/ObjectsByType}
+\onecolumn
+
+\chapter{List of Common Names}
+The following table is ordered alphabetically by common name. \\
+\input{build/TrivialNames}
+
+\begin{landscape}
+\chapter{Checklist of Objects}
+
+{\small Use this checklist to look up page numbers, to look up
+  essential information, and to make entries of the dates of your
+  first and subsequent observations.}
+
+%% \setlength{\marginparwidth}{0.1in}
+%% \setlength{\marginparsep}{0in}
+%% \setlength{\leftmargin}{-0.5in}
+
+\input{build/Checklist}
+\end{landscape}
+
+\chapter{Logging Forms}
+
+This section contains the actual logging forms.
+
+Note that the page numbers for each chart are listed in the Checklist
+section.
+
+%\setlength{\oddsidemargin}{0.2in} 
+%\setlength{\evensidemargin}{0.2in}
+\setlength{\marginparwidth}{0.2in}
+\setlength{\marginparsep}{0in}
+%\usepackage[top=0.15in, bottom=0.2in, left=0.5in, right=0in]{geometry}
+\setlength{\topmargin}{0.0in}
+\addtolength{\voffset}{-0.3in}
+%\setlength{\bottommargin}{0.2in}
+\setlength{\leftmargin}{-0.5in}
+%\setlength{\rightmargin}{-0.3in}
+\addtolength{\textwidth}{0.7in}
+\setlength{\parindent}{0cm}
+\setlength{\hangindent}{0cm}
+
+\letterpapertrue
+
+\ifletterpaper
+\setlength{\headsep}{-13pt}
+\titlespacing{\section}{0pt}{-5pt}{0pt}
+\fi
+
+\input{build/Objects}
+
+\end{document}
